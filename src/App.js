@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Header, Log, Home, Page1, Page2, Page3, NotFound } from "./Exports";
+import { Home, Page1, Page2, Page3, NotFound, Header, Log, NftBox } from "./Exports";
 import "./App.css";
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
