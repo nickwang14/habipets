@@ -43,3 +43,10 @@
     transform: rotate(360deg);
   }
 }
+
+.NftFlexBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

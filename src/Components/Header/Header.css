@@ -2,14 +2,28 @@
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
   padding: 1em;
   margin-bottom: 2em;
-  background-color: blue;
   color: #fff;
+  background-color: gray;
+  gap: 30px;
+}
 
-  nav {
-    display: flex;
-  }
+.HeaderButton {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.HeaderTitleBox {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.HeaderIcon {
+  width: 50px;
+  display: inline-block;
 }
