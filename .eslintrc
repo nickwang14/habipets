@@ -1,7 +1,0 @@
-{
-  "extends": ["eslint-plugin-react", "prettier"],
-  "rules": {
-    "indent": "error",
-    "quotes": [2, "single", "avoid-escape"]
-  }
-}

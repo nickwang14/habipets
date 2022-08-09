@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Header, Log, NftBox } from "../Exports";
+import { Header, Log, NftBox, Intro } from "../../Exports";
+import "./Home.css";
 
 const Home = () => {
   //const [ user, setUser ] = useState()
@@ -14,8 +15,11 @@ const Home = () => {
   return (
     <div>
       <Header title={"HabiPets"} />
-      <NftBox type={true} />
-      <NftBox type={true} />
+      <Intro />
+      <div className="NftFlexBox">
+        <NftBox type={false} />
+        <NftBox type={true} />
+      </div>
       <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
       <button onClick={() => console.log(process.env)}></button>
     </div>
