@@ -3,7 +3,6 @@
 .GoodNftBox {
   width: 292px;
   height: 415px;
-
   background: #231942;
   border-radius: 25px;
 }
@@ -34,4 +33,8 @@
   padding: 5px 10px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.NftBoxLink:hover {
+  cursor: pointer;
 }
