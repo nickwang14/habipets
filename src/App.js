@@ -8,6 +8,7 @@ import {
   NotFound,
   Header,
   Log,
+  Intro,
   NftBox,
 } from "./Exports";
 import "./App.css";
@@ -37,6 +38,7 @@ function App() {
               content={
                 <div>
                   <Header title={"HabiPets"} />
+                  <Intro/>
                   <div className="NftFlexBox">
                     <NftBox type={false} />
                     <NftBox type={true} />
