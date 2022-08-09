@@ -11,7 +11,8 @@ const Home = () => {
                 <NftBox type={HabitType.GOOD} />
                 <NftBox type={HabitType.BAD} />
             </div>
-            <button onClick={() => console.log(process.env)}></button>
+
+            <button onClick={() => console.log(process.env)}>Log Env</button>
         </div>
     );
 };

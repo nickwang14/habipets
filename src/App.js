@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home, HabitPage, NotFound } from './Exports';
 import './App.css';
@@ -8,13 +9,15 @@ import './App.css';
 
 function App() {
     return (
-        <Router>
-            <Routes>
-                <Route exact path="/" element={<Home />}></Route>
-                <Route exact path="/HabitPage" element={<HabitPage />}></Route>
-                <Route path="*" element={<NotFound />}></Route>
-            </Routes>
-        </Router>
+        <Suspense>
+            <Router>
+                <Routes>
+                    <Route exact path="/" element={<Home />}></Route>
+                    <Route exact path="/HabitPage" element={<HabitPage />}></Route>
+                    <Route path="*" element={<NotFound />}></Route>
+                </Routes>
+            </Router>
+        </Suspense>
     );
 }
 
