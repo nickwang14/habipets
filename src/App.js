@@ -21,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <Header title={"HabiPets"}/>
+      <Intro/>
       <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
       <button onClick={() => console.log(process.env)}></button>
     </div>
