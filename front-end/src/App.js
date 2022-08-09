@@ -13,7 +13,7 @@ const Log = ({ hapet, streak, onClick, lastLog }) => (
     />
     <button onClick={onClick}> Log Your Habit </button>
     <p> Your current streak is {streak} </p>
-    <p> You logged your last Habbit on {lastLog} </p>
+    <p> You logged your last Habit on {lastLog} </p>
   </div>
 );
 
