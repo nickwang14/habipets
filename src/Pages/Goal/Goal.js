@@ -1,14 +1,31 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '../../Exports';
 import './Goal.css';
 
 export default function Goal() {
+    let navigate = useNavigate();
+
+    const formValidation = (event) => {
+        event.preventDefault();
+        const habit = event.target.habit.value;
+        const frequency = event.target.frequency.value;
+        alert('Submit Form Data to Altura: ' + habit + ' : ' + frequency);
+        const success = true; //success pushing to altura
+        if (success) {
+            navigate(`/HabitPage${type}`, { replace: true });
+        } else {
+            alert('Form Data submission failed please try again')
+        }
+        
+    }
     const { type } = useParams();
     return (
         <div>
             <Header title={'HabiPets'} />
             <h1 className="Title">Goal for {type} habit</h1>
-            <form className="FormContent">
+            <form className="FormContent" onSubmit={(e) => {
+                formValidation(e);
+            }}>
                 <div>
                     <label htmlFor="habit">Habit:</label>
                     <input
@@ -34,9 +51,6 @@ export default function Goal() {
                 </div>
                 <button type="submit">Create My Habit</button>
             </form>
-            <div className="NextPageBox">
-                <Link to={`/HabitPage${type}`}>next page</Link>
-            </div>
         </div>
     );
 }
