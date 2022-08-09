@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
 import './Intro.css';
 
-export default function Intro() {
+const Intro = () => {
     const [activeSlide, setActiveSlide] = useState(1);
 
     useEffect(() => {
@@ -87,5 +86,4 @@ export default function Intro() {
     );
 }
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<Intro />, rootElement);
+export default Intro

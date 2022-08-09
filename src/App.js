@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
     Home,
@@ -21,22 +21,20 @@ function App() {
         <HabitTypeContext.Provider value={'good'}>
             <Router>
                 <Routes>
-                    <Suspense>
-                        <Route exact path="/" element={<Home />}></Route>
-                        <Route
-                            exact
-                            path="/Instructions:type"
-                            element={<Instructions />}
-                        ></Route>
-                        <Route exact path="/Goal:type" element={<Goal />}></Route>
-                        <Route exact path="/HabitPage:type" element={<HabitPage />}></Route>
-                        <Route
-                            exact
-                            path="/Congratulations"
-                            element={<Congratulations />}
-                        ></Route>
-                        <Route path="*" element={<NotFound />}></Route>
-                    </Suspense>
+                    <Route exact path="/" element={<Home />}></Route>
+                    <Route
+                        exact
+                        path="/Instructions:type"
+                        element={<Instructions />}
+                    ></Route>
+                    <Route exact path="/Goal:type" element={<Goal />}></Route>
+                    <Route exact path="/HabitPage:type" element={<HabitPage />}></Route>
+                    <Route
+                        exact
+                        path="/Congratulations"
+                        element={<Congratulations />}
+                    ></Route>
+                    <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </Router>
         </HabitTypeContext.Provider>
