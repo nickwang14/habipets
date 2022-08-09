@@ -1,0 +1,18 @@
+.Title {
+    color: black;
+    text-align: center;
+}
+
+.FormContent {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.NextPageBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
