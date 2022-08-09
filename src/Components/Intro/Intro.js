@@ -1,10 +1,10 @@
-import React from "react";
-import "./Intro.css";
+import './Intro.css';
 
 function Intro() {
-  return (
-    <div>
-      <span className="intro1">
+    return (
+        <div>
+            <span className="intro1">
+                {/* eslint-disable */}
         "The essence of Tiny Habits is this: Take a behavior you want, make it
         tiny, find where it fits naturally in your life, and nurture its
         growth."
