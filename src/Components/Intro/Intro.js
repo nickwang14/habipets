@@ -17,40 +17,30 @@ export default function Intro() {
         };
         const intervalId = setInterval(() => {
             cycleReviews();
-        }, 10000);
+        }, 6000);
         return () => clearInterval(intervalId);
     }, []);
 
     const reviews = [
         {
-            name: 'Jonathan D.',
-            citation: 'Sale Closed in 2019',
             quote:
-        'Door.com has been great. I feel like I got to work with a specialist at each point in the process. Everyone was very professional and very helpful. Plus, Im amazed at the flat- fee for the sale! Great way to save at closing.Door.com has been great.I feel like I got to work with a specialist at each point in the process.Everyone was very professional and very helpful.Plus, Im amazed at the flat-fee for the sale! Great way to save at closing.',
+        'The essence of Tiny Habits is this: Take a behavior you want, make it tiny, find where it fits naturally in your life, and nurture its growth.',
         },
         {
-            name: 'Peter C.',
-            citation: 'Sale Closed in 2019',
             quote:
-        'I have bought and sold ten homes. This has been the most rewarding experience of them all. True professionalism and insight as well as great customer service makes me a believer in the Door.com business model.',
+        'In order to design successful habits and change your behaviors, you should do three things. Stop judging yourself. Take your aspirations and break them down into tiny behaviors. Embrace mistakes as discoveries and use them to move forward.',
         },
         {
-            name: 'Paulette H.',
-            citation: 'Sale Closed in 2019',
             quote:
-        'The entire experience from onboarding to the sale of our home has been professional, expedited quickly, and I saved close to $14,000 in commissions. I will absolutely be using Door.com for the sale of my next property.',
+        'There are only three things we can do that will create lasting change: Have an epiphany, change our environment, or change our habits in tiny ways.',
         },
         {
-            name: 'Ryan W.',
-            citation: 'Sale Closed in 2019',
             quote:
-        'Service was excellent EVERY step of the process! No way to tell that Door.com provided a flat rate service by the way that they treated us and handled every step of the transactions.',
+        'Chains of habit are too light to be felt until they are too heavy to be broken.',
         },
         {
-            name: 'Kevin R.',
-            citation: 'Sale Closed in 2019',
             quote:
-        'Everyone we worked with was very responsive, professional and easy to work with. A great experience all around. I work in this industry too so my expectations are high. Great work by all.',
+        'Change will not come if we wait for some other person or some other time. We are the ones we’ve been waiting for. We are the change that we seek.',
         },
     ];
 
@@ -58,7 +48,7 @@ export default function Intro() {
         <div className="App">
             <ul className="carousel__list">
                 {reviews.map((review, index) => {
-                    const { citation, name, quote } = review;
+                    const { quote } = review;
                     const count = index + 1;
                     return (
                         <li
@@ -70,10 +60,6 @@ export default function Intro() {
                             key={count}
                         >
                             <blockquote className="carousel__quote">
-                                <cite>
-                                    <span className="carousel__name">{name}</span>
-                                    <span className="carousel__citation">{citation}</span>
-                                </cite>
                                 <p>{quote}</p>
                             </blockquote>
                         </li>
@@ -97,7 +83,6 @@ export default function Intro() {
                     />
                 </li>
             </ul>
-            <p>Active Slide = {activeSlide}</p>
         </div>
     );
 }
