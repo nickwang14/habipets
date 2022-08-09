@@ -2,6 +2,7 @@ import axios from 'axios';
 import { bool } from 'prop-types';
 import { useState } from 'react';
 
+
 const AuthenticationMessage = ({ isAuthenticated }) => {
     if (isAuthenticated) {
         return <p> User is authenticated</p>;
@@ -21,8 +22,10 @@ const Authenticate = () => {
             .get(
                 `http://localhost:8080/https://api.alturanft.com/api/v2/user/verify_auth_code/${address}/${guard}`
             )
-            .then((response) => setIsAuthenticated(response.data));
-        console.log(isAuthenticated);
+            .then((response) => {setIsAuthenticated(response.data.authenticated);
+                console.log(response.data);
+                console.log(isAuthenticated);
+            })
     };
 
     return (
