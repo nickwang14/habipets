@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from './Components/Header/Header';
 import Log from './Components/Log/Log';
+import Intro from './Components/Intro/Intro';
 import "./App.css";
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
