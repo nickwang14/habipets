@@ -10,7 +10,7 @@ module.exports = {
         sourceType: 'module',
         ecmaVersion: 8
     },
-    extends: ['prettier', 'eslint:recommended', 'plugin:react/recommended', 'plugin:react/jsx-runtime'],
+    extends: ['eslint:recommended', 'plugin:react/recommended'],
     plugins: ['eslint-plugin-react'],
     rules: {
         indent: 'error',

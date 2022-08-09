@@ -1,0 +1,12 @@
+.header {
+    color: green;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.home {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}

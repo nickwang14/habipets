@@ -15,6 +15,14 @@ const Home = () => {
                 <NftBox type={HabitType.GOOD} />
                 <NftBox type={HabitType.BAD} />
             </div>
+            <button
+                className="ConnectButton"
+                onClick={() => {
+                    alert('Altura Connect wallet backend');
+                }}
+            >
+        Connect
+            </button>
         </div>
     );
 };

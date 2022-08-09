@@ -6,7 +6,11 @@ function Header({ title }) {
     return (
         <div>
             <nav className="Header">
-                <Link to="/Home" className="HeaderTitleBox">
+                <Link
+                    to="/"
+                    className="HeaderTitleBox"
+                    style={{ textDecoration: 'none' }}
+                >
                     <img src={require('../NftBox/GoodNft.png')} className="HeaderIcon" />
                     <h1 className="HeaderTitle">{title}</h1>
                 </Link>

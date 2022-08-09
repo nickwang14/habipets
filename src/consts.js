@@ -1,6 +1,6 @@
 export const HabitType = {
-    GOOD: 'GOOD',
-    BAD: 'BAD',
+    GOOD: 'Good',
+    BAD: 'Bad',
 };
 
 //bscscan contract address
