@@ -37,8 +37,11 @@ function App() {
               content={
                 <div>
                   <Header title={"HabiPets"} />
-                  <NftBox type={true} />
-                  <NftBox type={true} />
+                  <div>
+                    <NftBox type={false} />
+                    <NftBox type={true} />
+                  </div>
+
                   <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
                   <button onClick={() => console.log(process.env)}></button>
                 </div>
