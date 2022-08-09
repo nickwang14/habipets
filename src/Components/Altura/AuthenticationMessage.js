@@ -2,7 +2,6 @@ import axios from 'axios';
 import { bool } from 'prop-types';
 import { useState } from 'react';
 
-
 const AuthenticationMessage = ({ isAuthenticated }) => {
     if (isAuthenticated) {
         return <p> User is authenticated</p>;

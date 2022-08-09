@@ -44,7 +44,7 @@ const Intro = () => {
     ];
 
     return (
-        <div className="App">
+        <div className="Intro">
             <ul className="carousel__list">
                 {reviews.map((review, index) => {
                     const { quote } = review;

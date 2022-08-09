@@ -1,5 +1,6 @@
-import { collectionAddress } from '../../consts'
-import Altura from '@altura/altura-js'
+import { COLLECTION_ADDRESS } from '../../consts'
+import {Altura} from '@altura/altura-js'
+
 const altura = new Altura(process.env.ALTURA_API_KEY)
 
 const BeginHabit = () => {
@@ -7,7 +8,7 @@ const BeginHabit = () => {
         const response = await altura.getItems(
             {}, // default options
             {
-                collectionAddress: collectionAddress
+                collectionAddress: COLLECTION_ADDRESS
             } // fetching items with the specified collection address only
         )
         console.log(response)
