@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1> HaPets </h1>
+      <h1> HabiPets </h1>
       <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
       <button onClick={() => console.log(process.env)}></button>
     </div>
