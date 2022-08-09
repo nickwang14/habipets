@@ -8,6 +8,7 @@ import HabitPage from './Pages/HabitPage/HabitPage';
 import NotFound from './Pages/NotFound';
 import NftBox from './Components/NftBox/NftBox';
 import CalendarModal from './Components/Calendar/CalendarModal';
+import Congratulations from './Pages/Congrats/Congrats';
 
 export {
     Home,
@@ -20,4 +21,5 @@ export {
     Log,
     NftBox,
     CalendarModal,
+    Congratulations,
 };
