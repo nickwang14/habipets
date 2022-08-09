@@ -6,7 +6,7 @@ export default function Congratulations() {
     return (
         <div>
             <h1 className="header">Congratulations on completing your HabiPet!</h1>
-            <Link className="home" to={'/'}>
+            <Link class="home" to={'/'}>
         Set New Habit
             </Link>
         </div>
