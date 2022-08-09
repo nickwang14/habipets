@@ -5,9 +5,13 @@ import "./Header.css";
 
 function Header(props) {
   return (
-    <div className="Header">
-      <h1>{props.title}</h1>
-      <nav>
+    <div>
+      <nav className="Header">
+        <div className="HeaderTitleBox">
+          <img src={require("../NftBox/GoodNft.png")} className="HeaderIcon" />
+          <h1 className="HeaderTitle">{props.title}</h1>
+        </div>
+
         <Link to="/p1">
           <HeaderButton txt={"page 1"} />
         </Link>
