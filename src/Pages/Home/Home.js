@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Header, Log, NftBox, Intro } from '../../Exports';
+import { Header, NftBox, Intro } from '../../Exports';
 import './Home.css';
 import { HabitType } from '../../consts';
 
