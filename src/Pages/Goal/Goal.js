@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '../../Exports';
 import './Goal.css';
@@ -19,6 +20,8 @@ export default function Goal() {
         
     }
     const { type } = useParams();
+    const [frequency, setFrequency] = useState(1);
+
     return (
         <div>
             <Header title={'HabiPets'} />
@@ -26,29 +29,17 @@ export default function Goal() {
             <form className="FormContent" onSubmit={(e) => {
                 formValidation(e);
             }}>
-                <div>
-                    <label htmlFor="habit">Habit:</label>
-                    <input
-                        type={'text'}
-                        id="habit"
-                        placeholder="Enter your Habit here..."
-                    />
-                </div>
-                <div>
-                    <label htmlFor="frequency">Frequency:</label>
-                    <select id="frequency">
-                        <option>1x</option>
-                        <option>2x</option>
-                        <option>3x</option>
-                        <option>4x</option>
-                        <option>5x</option>
-                        <option>6x</option>
-                        <option>7x</option>
-                        <option>8x</option>
-                        <option>9x</option>
-                        <option>10x</option>
-                    </select>
-                </div>
+                <label htmlFor="habit">Habit:</label>
+                <input
+                    type={'text'}
+                    id="habit"
+                    placeholder="Enter your Habit here..."
+                    className='HabitInput'
+                />
+                <label htmlFor="frequency">Frequency:</label>
+                <input id='frequency' type='range' min='1' max='7' onChange={(e) => {setFrequency(e.target.value)}} value={frequency}></input>
+                <span>{frequency}</span>
+                <span>test</span>
                 <button type="submit">Create My Habit</button>
             </form>
         </div>
