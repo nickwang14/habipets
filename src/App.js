@@ -7,15 +7,16 @@ import './App.css';
 // const altura = new Altura(process.env.ALTURA_API_KEY);
 
 function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route exact path="/" element={<Home />}></Route>
-                <Route exact path="/HabitPage" element={<HabitPage />}></Route>
-                <Route path="*" element={<NotFound />}></Route>
-            </Routes>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/GoodHabit" element={<GoodHabit />}></Route>
+        <Route exact path="/BadHabit" element={<BadHabit />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
