@@ -1,29 +1,50 @@
 import axios from "axios"
 import {useState} from 'react';
 
-const UserInput = () => {
-    const [message, setMessage] = useState(;;);
+const AuthenticationMessage = ( {isAuthenticated} ) => {
+    if(isAuthenticated){
+        return(<p> User is authenticated</p>)
+    } else {
+        return(<p> User is not authenticated </p>)
+    }
+}
 
-    const handleChange = event => {
-        setMessage(event.target.value);
-        console.log('value is:', event.target.value);
-    };
+const Authenticate = () => {
+    const [address, setAddress] = useState();
+    const [guard, setGuard] = useState();
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
 
-
-
+    const handleAuthentication = () => {
+        axios.get(
+            `https://api.alturanft.com/api/v2/user/verify_auth_code/${address}/${guard}`
+            ).then( response => setIsAuthenticated(response.data))
+        console.log(isAuthenticated)
+    }
 return (
     <div>
         <input
             type="text"
-            id="message"
+            id="userAddress"
             name="message"
-            onChange={handleChange}
-            value={message}
+            onChange={(event) => setAddress(event.target.value)}
+            value={address}
+        />
+        <input
+            type="text"
+            id="guardCode"
+            name="guardCode"
+            onChange={(event) => setGuard(event.target.value)}
+            value={guard}
         />
 
-        <h2>Message: {message}</h2>
-        </div>
+        <button onClick = {handleAuthentication
+        }> Authenticate </button>
+
+        <p>address is: {`this is ${address}`}</p>
+        <p>guard code is: {guard}</p>
+        <AuthenticationMessage isAuthenticated={isAuthenticated} />
+    </div>
 );
 };
 
-export default UserInput;
+export default Authenticate;

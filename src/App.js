@@ -3,7 +3,7 @@ import { Header, Log } from "./Exports";
 import NftBox from "./Components/NftBox/NftBox";
 import "./App.css";
 import axios from 'axios';
-import UserInput from './Components/alturaGuard'
+import Authenticate from './Components/Altura/alturaGuard'
 
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <Header title={"HabiPets"} />
-      <UserInput />
+      <Authenticate />
       <NftBox type={true} />
       <NftBox type={false} />
       <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
