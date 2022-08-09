@@ -9,7 +9,7 @@
   .App {
     align-items: center;
     display: grid;
-    height: 100vh;
+    height: 30vh;
     font-family: system-ui;
     justify-content: center;
   }
