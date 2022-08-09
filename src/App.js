@@ -19,13 +19,6 @@ const altura = new Altura(process.env.ALTURA_API_KEY);
 
 function App() {
   //const [ user, setUser ] = useState()
-  const [lastLog, setLastLog] = useState(" Never ");
-  const [streak, setStreak] = useState(0);
-
-  const handleLog = () => {
-    setStreak(streak + 1);
-    setLastLog(Date());
-  };
 
   return (
     <Router>
