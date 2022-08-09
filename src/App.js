@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Home, Page1, Page2, Page3, NotFound, Header, Log, NftBox } from "./Exports";
+import {
+  Home,
+  Page1,
+  Page2,
+  Page3,
+  NotFound,
+  Header,
+  Log,
+  NftBox,
+} from "./Exports";
 import "./App.css";
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
@@ -25,12 +34,14 @@ function App() {
           path="/"
           element={
             <Home
-              Header={<Header title={"HabiPets"} />}
-              Log={
-                <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
-              }
-              BottomButton={
-                <button onClick={() => console.log(process.env)}></button>
+              content={
+                <div>
+                  <Header title={"HabiPets"} />
+                  <NftBox type={true} />
+                  <NftBox type={true} />
+                  <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
+                  <button onClick={() => console.log(process.env)}></button>
+                </div>
               }
             />
           }
