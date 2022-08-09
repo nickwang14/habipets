@@ -4,7 +4,7 @@ import "./Intro.css";
 function Intro() {
     return (
         <div>
-            <span className="intro">
+            <span className="intro1">
                 "The essence of Tiny Habits is this: Take a behavior you want,
                 make it tiny, find where it fits naturally in your life, and nurture its growth."
                 <br/><br/>
