@@ -1,13 +1,7 @@
 import react from "react";
 
-function Home({ Header, Log, BottomButton }) {
-  return (
-    <div>
-      {Header}
-      {Log}
-      {BottomButton}
-    </div>
-  );
+function Home(props) {
+  return props.content;
 }
 
 export default Home;

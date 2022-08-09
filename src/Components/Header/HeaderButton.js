@@ -1,9 +1,9 @@
 import React from "react";
 
-function HeaderButton({ txt }) {
+function HeaderButton(props) {
   return (
     <div>
-      <p>{txt}</p>
+      <p>{props.txt}</p>
     </div>
   );
 }
