@@ -8,6 +8,7 @@ import {
   NotFound,
   Header,
   Log,
+  Intro,
   NftBox,
 } from "./Exports";
 import "./App.css";
