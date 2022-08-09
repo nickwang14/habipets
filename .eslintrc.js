@@ -9,7 +9,7 @@ module.exports = {
     parserOptions: {
         sourceType: 'module',
     },
-    extends: ['prettier', 'eslint:recommended', 'plugin:react/recommended'],
+    extends: ['eslint:recommended', 'plugin:react/recommended'],
     plugins: ['eslint-plugin-react'],
     rules: {
         indent: 'error',
