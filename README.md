@@ -1,4 +1,4 @@
-# happets
+# habipets
 # ETHToronto Hackathon Project 
 
 ## Glossary  
