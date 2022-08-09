@@ -6,7 +6,11 @@ export default function NftBox(props) {
   if (goodHabit) {
     return (
       <div className="GoodNftBox">
-        <img src={require("./GoodNft.png")} />
+        <img
+          src={require("./GoodNft.png")}
+          alt="Evil Pet"
+          className="NftImage"
+        />
         <span className="NftBoxText">Embrace a good habit</span>
       </div>
     );
