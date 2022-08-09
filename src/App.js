@@ -37,7 +37,7 @@ function App() {
               content={
                 <div>
                   <Header title={"HabiPets"} />
-                  <div>
+                  <div className="NftFlexBox">
                     <NftBox type={false} />
                     <NftBox type={true} />
                   </div>
