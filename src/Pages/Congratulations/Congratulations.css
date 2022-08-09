@@ -10,3 +10,15 @@
     display: flex;
     justify-content: center;
 }
+
+.image {
+    width: 292px;
+    height: 283px;
+    border-radius: 25px;
+
+  }
+.imagewrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
