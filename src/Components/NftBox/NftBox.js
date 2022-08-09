@@ -14,11 +14,11 @@ export default function NftBox({ type }) {
                     alt="Evil Pet"
                     className="NftImage"
                 />
-                <span className="NftBoxText">
+                <p className="NftBoxText">
                     {type === HabitType.GOOD
                         ? 'Embrace a good habit'
                         : 'Kick a bad habit'}
-                </span>
+                </p>
             </div>
         </Link>
     );
