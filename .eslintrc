@@ -1,0 +1,6 @@
+{
+  "extends": ["prettier", "eslint-plugin-react"],
+  "rules": {
+    "indent": "error"
+  }
+}

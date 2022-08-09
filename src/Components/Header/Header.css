@@ -1,11 +1,15 @@
 .Header {
-    box-sizing: border-box;
-    width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: blue;
+  color: #fff;
+
+  nav {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    padding: 1em;
-    margin-bottom: 2em;
-    background-color: blue;
-    color: #fff;
   }
+}
