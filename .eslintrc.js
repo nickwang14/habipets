@@ -8,6 +8,7 @@ module.exports = {
     },
     parserOptions: {
         sourceType: 'module',
+        ecmaVersion: 8
     },
     extends: ['eslint:recommended', 'plugin:react/recommended'],
     plugins: ['eslint-plugin-react'],
@@ -17,4 +18,9 @@ module.exports = {
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
     },
+    'settings': {
+        'react': {
+            'version': 'detect',
+        },
+    }
 };
