@@ -19,7 +19,6 @@ function Home(props) {
         <NftBox type={false} />
         <NftBox type={true} />
       </div>
-
       <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
       <button onClick={() => console.log(process.env)}></button>
     </div>

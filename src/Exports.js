@@ -9,6 +9,7 @@ import GoodHabit from "./Pages/GoodHabit";
 import BadHabit from "./Pages/BadHabit";
 import NotFound from "./Pages/NotFound";
 import NftBox from "./Components/NftBox/NftBox";
+import CalendarModal from "./Components/Calendar/CalendarModal";
 
 export {
   Home,
@@ -21,4 +22,5 @@ export {
   Header,
   Log,
   NftBox,
+  CalendarModal,
 };
