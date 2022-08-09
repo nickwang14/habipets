@@ -6,10 +6,7 @@ export default function NftBox(props) {
   const goodHabit = props.type;
   if (goodHabit) {
     return (
-      <Link
-        to={{ pathname: "/HabitPage", query: { type: "goodhabit" } }}
-        className="NftBoxLink"
-      >
+      <Link to="/GoodHabit" className="NftBoxLink">
         <div className="GoodNftBox">
           <img
             src={require("./GoodNft.png")}
@@ -22,10 +19,7 @@ export default function NftBox(props) {
     );
   } else {
     return (
-      <Link
-        to={{ pathname: "/HabitPage", query: { type: "badhabit" } }}
-        className="NftBoxLink"
-      >
+      <Link to="/BadHabit" className="NftBoxLink">
         <div className="BadNftBox">
           <img src={require("./BadNft.png")} />
           <span className="NftBoxText">Fly away from a bad habit</span>
