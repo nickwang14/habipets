@@ -27,8 +27,7 @@ function App() {
         <Route exact path="/p1" element={<Page1 />}></Route>
         <Route exact path="/p2" element={<Page2 />}></Route>
         <Route exact path="/p3" element={<Page3 />}></Route>
-        <Route exact path="/GoodHabit" element={<GoodHabit />}></Route>
-        <Route exact path="/BadHabit" element={<BadHabit />}></Route>
+        <Route exact path="/HabitPage" element={<HabitPage />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </Router>
