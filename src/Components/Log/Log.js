@@ -13,7 +13,7 @@ function Log({ streak, onClick, lastLog }) {
 export default Log;
 
 Log.propTypes = {
-    streak: PropTypes.string,
-    onClick: PropTypes.function,
+    streak: PropTypes.number,
+    onClick: PropTypes.func,
     lastLog: PropTypes.string,
 };
