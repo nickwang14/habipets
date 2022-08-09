@@ -22,6 +22,13 @@
   border-radius: 25px;
 }
 
+.NftImage {
+  width: 292px;
+  height: 283px;
+  background: #231942;
+  border-radius: 25px;
+}
+
 .NftBoxText {
   position: absolute;
   width: 262px;
