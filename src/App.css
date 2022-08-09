@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -24,8 +25,14 @@
   color: white;
 }
 
-.App-link {
+.link {
   color: #61dafb;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: blue;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
@@ -35,11 +42,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.NftFlexBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
