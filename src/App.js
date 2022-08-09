@@ -1,11 +1,6 @@
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { Header, Log } from './Exports';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Header, Log, Home, Page1, Page2, Page3, NotFound } from "./Exports";
 import "./App.css";
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
@@ -24,11 +19,27 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Header title={"HabiPets"}/>
-        <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
-        <button onClick={() => console.log(process.env)}></button>
-      </div>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <Home
+              Header={<Header title={"HabiPets"} />}
+              Log={
+                <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
+              }
+              BottomButton={
+                <button onClick={() => console.log(process.env)}></button>
+              }
+            />
+          }
+        ></Route>
+        <Route exact path="/p1" element={<Page1 />}></Route>
+        <Route exact path="/p2" element={<Page2 />}></Route>
+        <Route exact path="/p3" element={<Page3 />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
     </Router>
   );
 }
