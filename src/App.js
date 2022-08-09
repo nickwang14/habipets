@@ -18,8 +18,6 @@ const { Altura } = require("@altura/altura-js");
 const altura = new Altura(process.env.ALTURA_API_KEY);
 
 function App() {
-  //const [ user, setUser ] = useState()
-
   return (
     <Router>
       <Routes>
