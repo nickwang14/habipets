@@ -1,12 +1,15 @@
 import { Header, NftBox, Intro } from '../../Exports';
 import './Home.css';
 import { HabitType } from '../../consts';
+import Authenticate from '../../Components/Altura/AuthenticationMessage';
+import BeginHabit from '../../Components/Altura/assignParent';
 
 const Home = () => {
     return (
         <div>
             <Header title={'HabiPets'} />
-            <h1 className="Welcome">Welcome</h1>
+            <Authenticate/>
+            <BeginHabit style={{display:'flex'}}/>
             <Intro />
             <div className="NftFlexBox">
                 <NftBox type={HabitType.GOOD} />
