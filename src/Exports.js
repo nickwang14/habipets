@@ -1,5 +1,6 @@
 import Header from "./Components/Header/Header";
 import Log from "./Components/Log/Log";
+import Intro from "./Components/Intro/Intro";
 import Home from "./Pages/Home";
 import Page1 from "./Pages/Page1";
 import Page2 from "./Pages/Page2";
