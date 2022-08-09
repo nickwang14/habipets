@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Header, Log } from './Exports'
+import { Header, Log } from "./Exports";
+import NftBox from "./Components/NftBox/NftBox";
 import "./App.css";
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
@@ -18,7 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header title={"HabiPets"}/>
+      <Header title={"HabiPets"} />
+      <NftBox type={true} />
+      <NftBox type={false} />
       <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
       <button onClick={() => console.log(process.env)}></button>
     </div>
