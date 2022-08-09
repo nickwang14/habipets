@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Header, Log } from "./Exports";
 import NftBox from "./Components/NftBox/NftBox";
 import "./App.css";
+import axios from 'axios';
+import UserInput from './Components/alturaGuard'
+
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
 
@@ -12,6 +15,8 @@ function App() {
   const [lastLog, setLastLog] = useState(" Never ");
   const [streak, setStreak] = useState(0);
 
+
+
   const handleLog = () => {
     setStreak(streak + 1);
     setLastLog(Date());
@@ -20,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header title={"HabiPets"} />
+      <UserInput />
       <NftBox type={true} />
       <NftBox type={false} />
       <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
