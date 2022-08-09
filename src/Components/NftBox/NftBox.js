@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import './NftBox.css';
 import { HabitType } from '../../consts';
 
-export default function NftBox(props) {
-  const goodHabit = props.type;
-  if (goodHabit) {
+export default function NftBox() {
+  if (HabitType == "GOOD") {
     return (
       <Link to="/GoodHabit" className="NftBoxLink">
         <div className="GoodNftBox">
