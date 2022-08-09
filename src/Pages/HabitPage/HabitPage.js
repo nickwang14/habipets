@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { CalendarModal, Log } from '../../Exports';
-import { HabitType } from '../../consts';
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 import './HabitPage.css';
 
-export default function HabitPage({ type }) {
+export default function HabitPage() {
+    const { type } = useParams();
     //const [ user, setUser ] = useState()
     const [lastLog, setLastLog] = useState(' Never ');
     const [streak, setStreak] = useState(0);
@@ -14,26 +14,11 @@ export default function HabitPage({ type }) {
         setLastLog(Date());
         console.warn(lastLog);
     };
-
-    if (type === HabitType.GOOD) {
-        return (
-            <div>
-                <h1>Good Habit</h1>
-                <CalendarModal />
-                <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
-            </div>
-        );
-    } else {
-        return (
-            <div>
-                <h1>Bad Habit</h1>
-                <CalendarModal />
-                <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
-            </div>
-        );
-    }
+    return (
+        <div>
+            <h1>{type} Habit</h1>
+            <CalendarModal />
+            <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
+        </div>
+    );
 }
-
-HabitPage.propTypes = {
-    type: PropTypes.string,
-};

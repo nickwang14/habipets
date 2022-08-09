@@ -1,15 +1,13 @@
 import './Instructions.css';
-import PropTypes from 'prop-types';
+import { Link, useParams } from 'react-router-dom';
 
-export default function Instructions({ type }) {
-    console.log(type);
+export default function Instructions() {
+    const { type } = useParams();
+
     return (
         <div>
-            <h1 className="Title">Instructions</h1>
+            <h1 className="Title">Select a {type} Habit</h1>
+            <Link to={`/Goal${type}`}>next page</Link>
         </div>
     );
 }
-
-Instructions.propTypes = {
-    type: PropTypes.string,
-};
