@@ -30,27 +30,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <Home
-              content={
-                <div>
-                  <Header title={"HabiPets"} />
-                  <Intro/>
-                  <div className="NftFlexBox">
-                    <NftBox type={false} />
-                    <NftBox type={true} />
-                  </div>
-
-                  <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
-                  <button onClick={() => console.log(process.env)}></button>
-                </div>
-              }
-            />
-          }
-        ></Route>
+        <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/p1" element={<Page1 />}></Route>
         <Route exact path="/p2" element={<Page2 />}></Route>
         <Route exact path="/p3" element={<Page3 />}></Route>
