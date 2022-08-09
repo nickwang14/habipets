@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { CalendarModal, Log } from '../Exports';
-import { HabitType } from '../consts';
+import { CalendarModal, Log } from '../../Exports';
+import { HabitType } from '../../consts';
 import PropTypes from 'prop-types';
+import './HabitPage.css';
 
 export default function HabitPage({ type }) {
     //const [ user, setUser ] = useState()
