@@ -3,6 +3,18 @@ import "./App.css";
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
 
+/*
+export type TAlturaUser = {
+  address: string;
+  name: string;
+  bio?: string;
+  profilePic?: string;
+  socialLink?: string;
+  profilePicUrl?: string;
+  balance?: number; //available when fetching an item's holders
+};
+*/
+
 const altura = new Altura(process.env.ALTURA_API_KEY);
 
 const Log = ({ hapet, streak, onClick, lastLog }) => (
