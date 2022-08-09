@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from './Header';
 import "./App.css";
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1> HabiPets </h1>
+      <Header title={"HabiPets"}/>
       <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
       <button onClick={() => console.log(process.env)}></button>
     </div>
