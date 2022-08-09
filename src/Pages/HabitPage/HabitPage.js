@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CalendarModal, Log } from '../../Exports';
+import { CalendarModal, Log, Header } from '../../Exports';
 import { useParams } from 'react-router-dom';
 import './HabitPage.css';
 
@@ -16,6 +16,7 @@ export default function HabitPage() {
     };
     return (
         <div>
+            <Header title={'HabiPets'} />
             <h1>{type} Habit</h1>
             <CalendarModal />
             <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
