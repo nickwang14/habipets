@@ -7,7 +7,7 @@ export default function NftBox({ type }) {
     if (type === HabitType.GOOD) {
         return (
             <Link
-                to={{ pathname: '/HabitPage', query: { type: HabitType.GOOD } }}
+                to={{ pathname: '/Instructions', state: { type: HabitType.GOOD } }}
                 className="NftBoxLink"
             >
                 <div className="GoodNftBox">
@@ -23,7 +23,7 @@ export default function NftBox({ type }) {
     } else {
         return (
             <Link
-                to={{ pathname: '/HabitPage', query: { type: HabitType.BAD } }}
+                to={{ pathname: '/Instructions', state: { type: HabitType.BAD } }}
                 className="NftBoxLink"
             >
                 <div className="BadNftBox">

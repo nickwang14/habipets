@@ -15,7 +15,7 @@ export default function HabitPage({ type }) {
         console.warn(lastLog);
     };
 
-    if (type === HabitType) {
+    if (type === HabitType.GOOD) {
         return (
             <div>
                 <h1>Good Habit</h1>

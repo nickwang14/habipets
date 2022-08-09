@@ -6,12 +6,20 @@ const Home = () => {
     return (
         <div>
             <Header title={'HabiPets'} />
+            <h1 className="Welcome">Welcome</h1>
             <Intro />
             <div className="NftFlexBox">
                 <NftBox type={HabitType.GOOD} />
                 <NftBox type={HabitType.BAD} />
             </div>
-            <button onClick={() => console.log(process.env)}></button>
+            <button
+                className="ConnectButton"
+                onClick={() => {
+                    alert('Altura Connect wallet backend');
+                }}
+            >
+        Connect
+            </button>
         </div>
     );
 };
