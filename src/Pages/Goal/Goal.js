@@ -39,6 +39,7 @@ export default function Goal() {
                 <label htmlFor="frequency">Frequency:</label>
                 <input id='frequency' type='range' min='1' max='7' onChange={(e) => {setFrequency(e.target.value)}} value={frequency}></input>
                 <span>{frequency}</span>
+                <span>test</span>
                 <button type="submit">Create My Habit</button>
             </form>
         </div>
