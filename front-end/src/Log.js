@@ -12,6 +12,6 @@ function Log({ hapet, streak, onClick, lastLog }) {
             <p> You logged your last Habit on {lastLog} </p>
         </div>
     )
-};
+}
 
 export default Log
