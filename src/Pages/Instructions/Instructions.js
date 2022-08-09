@@ -9,8 +9,10 @@ export default function Instructions() {
         <div>
             <Header title={'HabiPets'} />
             <h1 className="Title">Select a {type} Habit</h1>
-            <p>Placeholder Instructions</p>
-            <Link to={`/Goal${type}`}>next page</Link>
+            <p className="Body">Placeholder Instructions</p>
+            <div className="NextPageBox">
+                <Link to={`/Goal${type}`}>Enter your Habit Details-&gt;</Link>
+            </div>
         </div>
     );
 }
