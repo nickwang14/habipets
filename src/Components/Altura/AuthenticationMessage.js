@@ -10,7 +10,10 @@ const AuthenticationMessage = ({ isAuthenticated }) => {
         return <p> User is not authenticated </p>;
     }
 };
-AuthenticationMessage.propTypes = bool //proptypes
+
+AuthenticationMessage.propTypes = {
+    isAuthenticated: bool
+}
 
 const Authenticate = () => {
     const [address, setAddress] = useState();

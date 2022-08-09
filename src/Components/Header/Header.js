@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header({ title }) {
     return (
         <div>
             <nav className="Header">
-                <div className="HeaderTitleBox">
+                <Link to="/Home" className="HeaderTitleBox">
                     <img src={require('../NftBox/GoodNft.png')} className="HeaderIcon" />
                     <h1 className="HeaderTitle">{title}</h1>
-                </div>
+                </Link>
             </nav>
         </div>
     );

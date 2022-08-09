@@ -1,7 +1,7 @@
 import { Header, NftBox, Intro } from '../../Exports';
 import './Home.css';
 import { HabitType } from '../../consts';
-import Authenticate from '../../Components/Altura/alturaGuard';
+import Authenticate from '../../Components/Altura/AuthenticationMessage';
 import BeginHabit from '../../Components/Altura/assignParent';
 
 const Home = () => {
