@@ -12,6 +12,7 @@ import NftBox from "./Components/NftBox/NftBox";
 
 export {
   Home,
+  Intro,
   Page1,
   Page2,
   Page3,
