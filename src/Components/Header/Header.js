@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HeaderButton from "./HeaderButton";
+import "./Header.css";
 
 function Header(props) {
   return (
-    <div>
+    <div className="Header">
       <h1>{props.title}</h1>
       <nav>
         <Link to="/p1">
