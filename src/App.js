@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Header, Log } from "./Exports";
-import NftBox from "./Components/NftBox/NftBox";
+import { Header, Log, NftBox } from "./Exports";
 import "./App.css";
 //import EvilPet from 'https://cdn.discordapp.com/attachments/1003507609749442701/1005678437953962034/turntable_2_gif.gif';
 const { Altura } = require("@altura/altura-js");
