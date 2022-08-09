@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat&display=swap");
+
+.GoodNftBox {
+  position: absolute;
+  width: 292px;
+  height: 415px;
+  left: 875px;
+  top: 237px;
+
+  background: #231942;
+  border-radius: 25px;
+}
+
+.BadNftBox {
+  position: absolute;
+  width: 292px;
+  height: 415px;
+  left: 375px;
+  top: 237px;
+
+  background: #231942;
+  border-radius: 25px;
+}
+
+.NftBoxText {
+  position: absolute;
+  width: 262px;
+  height: 89px;
+  left: 13px;
+  top: 302px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.8);
+}
