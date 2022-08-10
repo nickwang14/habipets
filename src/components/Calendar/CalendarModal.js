@@ -1,8 +1,8 @@
-import Modal from 'react-modal';
-import { useState } from 'react';
-import Calendar from 'react-calendar';
-// import 'react-calendar/dist/Calendar.css';
-import './Calendar.css';
+import Modal from 'react-modal'
+import { useState } from 'react'
+import Calendar from 'react-calendar'
+// import 'react-calendar/dist/Calendar.css'
+import './Calendar.css'
 
 export default function CalendarModal() {
     const customStyles = {
@@ -14,25 +14,25 @@ export default function CalendarModal() {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
         },
-    };
+    }
 
-    // let subtitle;
-    const [modalIsOpen, setIsOpen] = useState(false);
+    // let subtitle
+    const [modalIsOpen, setIsOpen] = useState(false)
 
     function openModal() {
-        setIsOpen(true);
+        setIsOpen(true)
     }
 
     // function afterOpenModal() {
     // // references are now sync'd and can be accessed.
-    //     subtitle.style.color = '#f00';
+    //     subtitle.style.color = '#f00'
     // }
 
     function closeModal() {
-        setIsOpen(false);
+        setIsOpen(false)
     }
 
-    const [value, onChange] = useState(new Date());
+    const [value, onChange] = useState(new Date())
 
     return (
         <div>
@@ -42,10 +42,10 @@ export default function CalendarModal() {
                 // onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
                 style={customStyles}
-                contentLabel="Calendar"
+                contentLabel='Calendar'
             >
                 <Calendar onChange={onChange} value={value} />
             </Modal>
         </div>
-    );
+    )
 }
