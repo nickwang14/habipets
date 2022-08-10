@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat&display=swap');
 
 .NftBox {
-    width: 292px;
-    height: 415px;
+    max-width: 292px;
+    max-height: 415px;
+    width: 40vw;
     background: #231942;
     border-radius: 25px;
 }
 
 .NftImage {
-    width: 292px;
-    height: 283px;
+    max-width: 292px;
+    max-height: 283px;
+    width: 40vw;
     background: #231942;
     border-radius: 25px;
 }
@@ -18,7 +20,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 1000;
-    font-size: 24px;
+    font-size: min(3vw, 24px);
     line-height: 30px;
     padding: 5px 10px;
     text-align: middle;
