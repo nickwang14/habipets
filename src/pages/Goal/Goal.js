@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import Header from 'components/Header/Header'
-import {AppContext} from 'ContextProvider'
+import { AppContext } from 'ContextProvider'
 import TextareaAutosize from 'react-textarea-autosize'
 import './Goal.css'
 
@@ -29,7 +29,7 @@ export default function Goal() {
         <div>
             <Header title={'HabiPets'} />
             <h1 className='Title'>Goal for {habitType} habit</h1>
-            <form id='HabitForm' 
+            <form id='HabitForm'
                 onSubmit={(e) => {
                     formValidation(e)
                 }}> <div className='FormContent' >
@@ -37,7 +37,7 @@ export default function Goal() {
                         <div className='InnerBox'>
                             <label htmlFor='habit'>Habit:</label>
                             <TextareaAutosize id='habit'
-                                className='HabitInput' placeholder='Write your Habit here...' maxRows={5}/>
+                                className='HabitInput' placeholder='Write your Habit here...' maxRows={5} />
                         </div>
                         <div className='InnerBox'>
                             <label htmlFor='frequency'>Frequency (per week):</label>
@@ -47,7 +47,7 @@ export default function Goal() {
                     </div>
                 </div>
                 <div className='InnerBox'>
-                    <button type='submit' form='HabitForm' value='submit'>Create My Habit</button>
+                    <button className="buttonText" type='submit' form='HabitForm' value='submit'>Create My Habit</button>
                 </div>
             </form>
         </div>

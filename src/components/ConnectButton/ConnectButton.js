@@ -1,13 +1,13 @@
 import './ConnectButton.css'
 
 const ConnectButton = () => (
-    <div className='ConnectButton'>
-        <button
+    <div className="ConnectButton">
+        <button className="buttonConnect"
             onClick={() => {
                 alert('Altura Connect wallet backend')
             }}
         >
-        Connect to play
+            Connect to Play
         </button>
     </div>
 )
