@@ -8,10 +8,10 @@
 }
 
 .NftImage {
-  width: 292px;
-  height: 283px;
-  background: #231942;
-  border-radius: 25px;
+    height: 292px;
+    width: 292px;
+    background: #231942;
+    border-radius: 25px;
 }
 
 .NftBoxText {
