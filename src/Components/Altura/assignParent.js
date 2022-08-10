@@ -1,5 +1,5 @@
 import { COLLECTION_ADDRESS } from '../../consts'
-import {Altura} from '@altura/altura-js'
+import { Altura } from '@altura/altura-js'
 
 const altura = new Altura(process.env.ALTURA_API_KEY)
 
