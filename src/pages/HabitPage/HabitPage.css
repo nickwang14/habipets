@@ -59,6 +59,7 @@
     width: 40vw;
     background: #231942;
     border-radius: 25px;
+    justify-content: space-around;
 }
 
 .HabitNftImage {
