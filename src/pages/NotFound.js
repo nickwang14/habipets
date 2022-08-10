@@ -3,7 +3,7 @@ function NotFound() {
         <div>
             <h1>NOT FOUND</h1>
         </div>
-    );
+    )
 }
 
-export default NotFound;
+export default NotFound

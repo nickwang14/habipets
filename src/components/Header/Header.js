@@ -8,23 +8,23 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 function Header({ title }) {
     return (
         <div>
-            <nav className="Header">
+            <nav className='Header'>
                 <Link
-                    to="/"
-                    className="HeaderTitleBox"
+                    to='/'
+                    className='HeaderTitleBox'
                     style={{ textDecoration: 'none' }}
                 >
-                    <img src={Logo} className="HeaderIcon" />
-                    <h1 className="HeaderTitle">{title}</h1>
+                    <img src={Logo} className='HeaderIcon' />
+                    <h1 className='HeaderTitle'>{title}</h1>
                 </Link>
                 <ConnectButton />
             </nav>
         </div>
-    );
+    )
 }
 
-export default Header;
+export default Header
 
 Header.propTypes = {
     title: PropTypes.string,
-};
+}

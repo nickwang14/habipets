@@ -1,54 +1,50 @@
-import { useEffect, useState } from 'react';
-import './Intro.css';
+import { useEffect, useState } from 'react'
+import './Intro.css'
 
 const Intro = () => {
-    const [activeSlide, setActiveSlide] = useState(1);
+    const [activeSlide, setActiveSlide] = useState(1)
 
     useEffect(() => {
-        let current = 1;
+        let current = 1
         const cycleReviews = () => {
             if (current === 5) {
-                current = 1;
+                current = 1
             } else {
-                current += 1;
+                current += 1
             }
-            setActiveSlide(current);
-        };
+            setActiveSlide(current)
+        }
         const intervalId = setInterval(() => {
-            cycleReviews();
-        }, 10000);
-        return () => clearInterval(intervalId);
-    }, []);
+            cycleReviews()
+        }, 10000)
+        return () => clearInterval(intervalId)
+    }, [])
 
     const reviews = [
         {
             quote:
-                '"The essence of tiny habits is this; take a behavior you want, make it tiny, find where it fits naturally in your life, and nurture its growth."',
+                'The essence of tiny habits is this take a behavior you want, make it tiny, find where it fits naturally in your life, and nurture its growth.',
         },
         {
             quote:
-                '"In order to design successful habits and change your behaviors, you should do three things. Stop judging yourself. Take your aspirations and break them down into tiny behaviors. Embrace mistakes as discoveries and use them to move forward."',
+                'There are only three things we can do that will create lasting change; have an epiphany, change our environment, or change our habits in tiny ways.',
         },
         {
             quote:
-                '"There are only three things we can do that will create lasting change; have an epiphany, change our environment, or change our habits in tiny ways."',
+                'Chains of habit are too light to be felt until they are too heavy to be broken.',
         },
         {
             quote:
-                '"Chains of habit are too light to be felt until they are too heavy to be broken."',
+                'Change will not come if we wait for some other person or some other time. We are the ones we’ve been waiting for. We are the change that we seek.',
         },
-        {
-            quote:
-                '"Change will not come if we wait for some other person or some other time. We are the ones we’ve been waiting for. We are the change that we seek."',
-        },
-    ];
+    ]
 
     return (
-        <div className="Intro">
-            <ul className="carousel__list">
+        <div className='Intro'>
+            <ul className='carousel__list'>
                 {reviews.map((review, index) => {
-                    const { quote } = review;
-                    const count = index + 1;
+                    const { quote } = review
+                    const count = index + 1
                     return (
                         <li
                             className={`carousel__item
@@ -58,15 +54,15 @@ const Intro = () => {
                 `}
                             key={count}
                         >
-                            <blockquote className="carousel__quote">
+                            <blockquote className='carousel__quote'>
                                 <p>{quote}</p>
                             </blockquote>
                         </li>
-                    );
+                    )
                 })}
             </ul>
         </div>
-    );
+    )
 }
 
 export default Intro
