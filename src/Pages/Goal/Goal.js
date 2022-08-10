@@ -8,7 +8,7 @@ export default function Goal() {
 
     const formValidation = (event) => {
         event.preventDefault();
-        const habit = event.target.habit.value;
+        const habit = document.getElementById('habit').innerHTML;
         const frequency = event.target.frequency.value;
         alert('Submit Form Data to Altura: ' + habit + ' : ' + frequency);
         const success = true; //success pushing to altura
@@ -26,7 +26,7 @@ export default function Goal() {
         <div>
             <Header title={'HabiPets'} />
             <h1 className="Title">Goal for {type} habit</h1>
-            <form onSubmit={(e) => {
+            <form id='HabitForm' onSubmit={(e) => {
                 formValidation(e);
             }}> <div className="FormContent" >
                     <div className='OuterBox'>
@@ -47,7 +47,7 @@ export default function Goal() {
                     </div>
                 </div>
                 <div className='InnerBox'>
-                    <button type="submit">Create My Habit</button>
+                    <button type="submit" form='HabitForm' value='submit'>Create My Habit</button>
                 </div>
             </form>
         </div>
