@@ -2,7 +2,7 @@ import './ConnectButton.css'
 
 const ConnectButton = () => (
     <div className="ConnectButton">
-        <button className="buttonText"
+        <button className="buttonConnect"
             onClick={() => {
                 alert('Altura Connect wallet backend');
             }}

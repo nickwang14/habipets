@@ -4,12 +4,8 @@
     justify-content: center;
 }
 
-.buttonText {
+.buttonConnect {
     color: black;
-}
-
-button {
-    color: rgba(255, 255, 255, 0.8);
     background-color: #bab4ca;
     border-radius: 10px;
     border: none;
@@ -32,13 +28,13 @@ button {
     transition: transform 0.2s;
 }
 
-button:hover,
-button:focus {
+.buttonConnect:hover,
+.buttonConnect:focus {
     background-color: #8479a5;
     transform: scale(1.07);
 }
 
-button:active {
+.buttonConnect:active {
     background-color: #5e5183;
     box-shadow: none;
 }
