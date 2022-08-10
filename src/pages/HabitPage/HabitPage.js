@@ -13,7 +13,7 @@ export default function HabitPage() {
     const [tokenId, setTokenId] = useState();
     const walletAddress = useAccount().address;
     const value = useContext(AppContext)
-    const startTx  = async () => {
+    const startTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
             return false;
@@ -139,7 +139,7 @@ export default function HabitPage() {
 
         const iface = new ethers.utils.Interface(gameAbi);
         iface.format(ethers.utils.FormatTypes.full);
-        const gameContract = new ethers.Contract(gameAddress, iface, provider );
+        const gameContract = new ethers.Contract(gameAddress, iface, provider);
         const gameWithSigner = gameContract.connect(signer);
 
         try {
@@ -151,12 +151,12 @@ export default function HabitPage() {
             setStreak(streak + 1);
             setLastLog(Date());
 
-        } catch(err) {
+        } catch (err) {
             alert('start function could not run successfully' + err);
             return false;
         }
     }
-    const logTx  = async () => {
+    const logTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
             return false;
@@ -282,10 +282,10 @@ export default function HabitPage() {
 
         const iface = new ethers.utils.Interface(gameAbi);
         iface.format(ethers.utils.FormatTypes.full);
-        const gameContract = new ethers.Contract(gameAddress, iface, provider );
+        const gameContract = new ethers.Contract(gameAddress, iface, provider);
         const gameWithSigner = gameContract.connect(signer);
 
-        
+
         try {
             const log = await gameWithSigner.log();
             await log.wait(1);
@@ -298,8 +298,8 @@ export default function HabitPage() {
         } catch(err) {
             console.log(err)
         }
-        
-        
+
+
     }
     const trackTx = async () => {
         if (!walletAddress) {
@@ -425,7 +425,7 @@ export default function HabitPage() {
 
         const iface = new ethers.utils.Interface(gameAbi);
         iface.format(ethers.utils.FormatTypes.full);
-        const gameContract = new ethers.Contract(gameAddress, iface, provider );
+        const gameContract = new ethers.Contract(gameAddress, iface, provider);
 
         try {
             const tracker = await gameContract.tracker(walletAddress);
@@ -1721,15 +1721,18 @@ export default function HabitPage() {
     return (
         <div>
             <Header title={'HabiPets'} />
-            <h1>{value.habitType} Habit</h1>
+            <h1 className="divCenter">{value.habitType} Habit</h1>
             <CalendarModal />
-            <button onClick={startTx}>Start</button>
-            <button onClick={logTx}>Log</button>
-            <button onClick={trackTx}>Track</button>
-            <button onClick={claimTx}>Claim</button>
-            <button onClick={balanceTx}>Get Token Id</button>
-            <button onClick={petTypeTx}>Get Pet Type</button>
+            
+            <div className="divCenter">
+                <button className="habitPageButton"  onClick={startTx}>Start</button>
+                <button className="habitPageButton"  onClick={logTx}>Log</button>
+                <button className="habitPageButton"  onClick={trackTx}>Track</button>
+                <button className="habitPageButton"  onClick={claimTx}>Claim</button>
+                <button className="habitPageButton"  onClick={balanceTx}>Get Token Id</button>
+                <button className="habitPageButton"  onClick={petTypeTx}>Get Pet Type</button>
+            </div>
             <Log streak={streak} lastLog={lastLog} />
-        </div> 
+        </div>
     )
 }
