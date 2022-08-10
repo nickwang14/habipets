@@ -49,41 +49,24 @@
     color: #231942;
 }
 
-.NftBox {
-    display: flex;
-    justify-content: space-between;
-    vertical-align: center;
-}
-.NftImage {
+
+.NftBox{
+    width: 100%;
     margin: 0 auto;
-    justify-content: center;
-    text-align: middle;
-    border: min(1vw, 5px) solid transparent;
+    display: flex;
 }
 
-.NftBox:hover {
+.NftImage {
+    margin: 0 auto;
+    border: min(1vw, 5px) solid transparent;
+    
+}
+
+/* .NftBox:hover {
     background: #8479a5;
     border: min(1vw, 5px) solid #231942;
 }
 
 .NftBox:hover .NftImage {
     background: #8479a5;
-}
-
-.NftBoxTextDiv {
-    display: flex;
-    justify-content: center;
-}
-
-.NftBoxLink {
-    text-decoration: none;
-}
-
-.NftBoxContainer:hover,
-.NftBoxContainer:focus {
-    transition: transform 0.3s;
-    cursor: pointer;
-    transform: scale(1.07);
-    border-radius: 25px;
-    transition: transform 0.35s;
-}
+} */
