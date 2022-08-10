@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { CalendarModal, Log, Header } from '../../Exports';
-import { HabitContext } from '../../HabitContext';
+import CalendarModal from 'components/Calendar/CalendarModal';
+import Log from 'components/Log/Log'
+import Header from 'components/Header/Header'
+import Context from 'ContextProvider';
 import './HabitPage.css';
 
 export default function HabitPage() {
@@ -14,7 +16,7 @@ export default function HabitPage() {
         console.warn(lastLog);
     };
     return (
-        <HabitContext.Consumer>
+        <Context.Consumer>
             {({ habitType }) => (
                 <div>
                     <Header title={'HabiPets'} />
@@ -23,6 +25,6 @@ export default function HabitPage() {
                     <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
                 </div>
             )}
-        </HabitContext.Consumer>
+        </Context.Consumer>
     );
 }

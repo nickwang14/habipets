@@ -25,3 +25,11 @@
   width: 50px;
   display: inline-block;
 }
+
+@media only screen and (max-width: 600px) {
+  .HeaderTitle {
+    display: none;
+  }
+}
+
+

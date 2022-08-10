@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import Logo from '../../assets/GoodNft.png';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import Logo from 'assets/GoodNft.png';
+import ConnectButton from 'components/ConnectButton/ConnectButton';
+// import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 function Header({ title }) {
     return (

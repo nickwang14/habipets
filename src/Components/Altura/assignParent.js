@@ -1,4 +1,4 @@
-import { COLLECTION_ADDRESS } from '../../consts'
+import { COLLECTION_ADDRESS } from 'consts'
 import { Altura } from '@altura/altura-js'
 import './altura.css';
 
