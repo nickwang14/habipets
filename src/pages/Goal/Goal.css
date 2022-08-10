@@ -23,9 +23,8 @@
         'Lucida Sans', Arial, sans-serif;
 }
 
-.HabitInput[contenteditable]:empty::before {
-    content: 'Enter your Habit here...';
-    color: gray;
+.HabitInput::placeholder {
+    color:rgb(75, 75, 75)
 }
 
 .OuterBox {

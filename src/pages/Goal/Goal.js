@@ -6,6 +6,7 @@ import TextareaAutosize from 'react-textarea-autosize'
 import './Goal.css'
 
 export default function Goal() {
+    const { pickHabitName } = useContext(AppContext)
     let navigate = useNavigate()
     const formValidation = (event) => {
         event.preventDefault()
@@ -15,7 +16,8 @@ export default function Goal() {
             alert('Please enter a habit')
             return false
         }
-        alert('Your habit: ' + habit + ' at a frequency of ' + frequency + ' time(s) per week has been saved!')
+        pickHabitName(habit);
+        alert(`Your ${habitType} habit: ` + habit + ' at a frequency of ' + frequency + ' time(s) per week has been saved!')
         const success = true //success pushing to altura
         if (success) {
             navigate('/HabitPage', { replace: true })

@@ -12,7 +12,7 @@ export default function HabitPage() {
     const [streak, setStreak] = useState(0)
     const [tokenId, setTokenId] = useState();
     const walletAddress = useAccount().address;
-    const value = useContext(AppContext)
+    const value = useContext(AppContext);
     const startTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
@@ -1988,7 +1988,7 @@ export default function HabitPage() {
     return (
         <div>
             <Header title={'HabiPets'} />
-            <h1 className="divCenter">{value.habitType} Habit</h1>
+            <h1 className="divCenter">Your {value.habitType} Habit: {value.habitName}</h1>
             <CalendarModal />
             
             <div className="divCenter">

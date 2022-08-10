@@ -13,8 +13,12 @@ export const Provider = ({ children }) => {
         alturaConnected: state.alturaConnected,
         pets: state.pets,
         todoList: state.todoList,
+        habitName: state.habitName,
         pickHabitType: (habitType) => {
             dispatch({ type: actions.PICK_HABIT_TYPE, value: habitType })
+        },
+        pickHabitName: (habitName) => {
+            dispatch({ type: actions.PICK_HABIT_NAME, value: habitName})
         },
         addTodoItem: (todoItemLabel) => {
             dispatch({ type: actions.ADD_TODO_ITEM, value: todoItemLabel })

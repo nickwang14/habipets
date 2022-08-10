@@ -8,6 +8,7 @@ export const initialState = {
 
 export const actions = {
     PICK_HABIT_TYPE: 'PICK_HABIT_TYPE',
+    PICK_HABIT_NAME: 'PICK_HABIT_NAME',
     CONNECT_WALLET: 'CONNECT_WALLET',
     CONNECT_ALTURA: 'CONNECT_ALTURA',
     GET_PETS: 'GET_PETS',
@@ -42,6 +43,8 @@ export const reducer = (state, action) => {
                 : todoItem
         )
         return { todoList: updatedTodoList };
+    } else if (action.type === actions.PICK_HABIT_NAME) {
+        return { habitName: action.value };
     } else {
         return state;
     }
