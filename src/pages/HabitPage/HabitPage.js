@@ -1999,8 +1999,8 @@ export default function HabitPage() {
             <CalendarModal />
 
             <div className="divCenter">
-                <button className="habitPageButton" onClick={startTx}>Get Pet</button>
-                <button className="habitPageButton" onClick={logTx}>CurrentStreak</button>
+                <button className="habitPageButton" onClick={startTx}>Start</button>
+                <button className="habitPageButton" onClick={logTx}>Log</button>
                 <button className="habitPageButton" onClick={trackTx}>Track</button>
                 <button className="habitPageButton" onClick={claimTx}>Claim</button>
                 <button className="habitPageButton" onClick={balanceTx}>Get Token Id</button>
