@@ -18,7 +18,7 @@ const Home = () => {
                     alert('Altura Connect wallet backend');
                 }}
             >
-        Connect
+                Connect
             </button>
         </div>
     );

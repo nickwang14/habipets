@@ -1,5 +1,6 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HabitContext } from './HabitContext';
+import { useState } from 'react'
 import {
     Home,
     HabitPage,
@@ -14,21 +15,20 @@ import './App.css';
 
 // const altura = new Altura(process.env.ALTURA_API_KEY);
 
-export const HabitTypeContext = React.createContext();
-
 function App() {
+    const [habitType, setHabitType] = useState('')
+    const habitValue = { habitType, setHabitType }
+
     return (
-        <HabitTypeContext.Provider value={'good'}>
+        <HabitContext.Provider value={habitValue}>
             <Router>
                 <Routes>
-                    <Route exact path="/" element={<Home />}></Route>
-                    <Route
-                        exact
-                        path="/Instructions:type"
-                        element={<Instructions />}
-                    ></Route>
-                    <Route exact path="/Goal:type" element={<Goal />}></Route>
-                    <Route exact path="/HabitPage:type" element={<HabitPage />}></Route>
+                    <Route exact path="/" element={
+                        <Home />
+                    }></Route>
+                    <Route exact path="/Goal" element={<Goal />}></Route>
+                    <Route exact path="/HabitPage" element={<HabitPage />}></Route>
+                    <Route exact path="/Instructions" element={<Instructions />}></Route>
                     <Route
                         exact
                         path="/Congratulations"
@@ -37,7 +37,7 @@ function App() {
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </Router>
-        </HabitTypeContext.Provider>
+        </HabitContext.Provider>
     );
 }
 
