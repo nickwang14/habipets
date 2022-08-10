@@ -47,7 +47,7 @@ export default function Goal() {
                     </div>
                 </div>
                 <div className='InnerBox'>
-                    <button type='submit' form='HabitForm' value='submit'>Create My Habit</button>
+                    <button className="buttonText" type='submit' form='HabitForm' value='submit'>Create My Habit</button>
                 </div>
             </form>
         </div>

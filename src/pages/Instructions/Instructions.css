@@ -25,3 +25,42 @@
     justify-content: center;
     margin-bottom: 70px;
 }
+
+.buttonHabit {
+    background-color: #bab4ca;
+    border-radius: 10px;
+    border: 2px solid #231942;
+    box-shadow: 0 0 0 0 inset;
+    box-sizing: border-box;
+    color: #231942;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, 'Segoe UI', 'Liberation Sans',
+        sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px 0.8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.buttonHabit:hover,
+.buttonHabit:focus {
+    background-color: #8479a5;
+    color: #231942;
+}
+
+.buttonHabit:active {
+    background-color: #5e5183;
+    box-shadow: none;
+    color: #231942;
+}
