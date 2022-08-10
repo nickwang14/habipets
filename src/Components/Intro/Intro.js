@@ -23,23 +23,23 @@ const Intro = () => {
     const reviews = [
         {
             quote:
-        'The essence of Tiny Habits is this: Take a behavior you want, make it tiny, find where it fits naturally in your life, and nurture its growth.',
+                'The essence of Tiny Habits is this: Take a behavior you want, make it tiny, find where it fits naturally in your life, and nurture its growth.',
         },
         {
             quote:
-        'In order to design successful habits and change your behaviors, you should do three things. Stop judging yourself. Take your aspirations and break them down into tiny behaviors. Embrace mistakes as discoveries and use them to move forward.',
+                'In order to design successful habits and change your behaviors, you should do three things. Stop judging yourself. Take your aspirations and break them down into tiny behaviors. Embrace mistakes as discoveries and use them to move forward.',
         },
         {
             quote:
-        'There are only three things we can do that will create lasting change: Have an epiphany, change our environment, or change our habits in tiny ways.',
+                'There are only three things we can do that will create lasting change: Have an epiphany, change our environment, or change our habits in tiny ways.',
         },
         {
             quote:
-        'Chains of habit are too light to be felt until they are too heavy to be broken.',
+                'Chains of habit are too light to be felt until they are too heavy to be broken.',
         },
         {
             quote:
-        'Change will not come if we wait for some other person or some other time. We are the ones we’ve been waiting for. We are the change that we seek.',
+                'Change will not come if we wait for some other person or some other time. We are the ones we’ve been waiting for. We are the change that we seek.',
         },
     ];
 
@@ -64,23 +64,6 @@ const Intro = () => {
                         </li>
                     );
                 })}
-                <li className="carousel__indicator">
-                    <span
-                        className={`carousel__dot${activeSlide === 1 ? ' active' : ''}`}
-                    />
-                    <span
-                        className={`carousel__dot${activeSlide === 2 ? ' active' : ''}`}
-                    />
-                    <span
-                        className={`carousel__dot${activeSlide === 3 ? ' active' : ''}`}
-                    />
-                    <span
-                        className={`carousel__dot${activeSlide === 4 ? ' active' : ''}`}
-                    />
-                    <span
-                        className={`carousel__dot${activeSlide === 5 ? ' active' : ''}`}
-                    />
-                </li>
             </ul>
         </div>
     );
