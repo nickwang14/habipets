@@ -26,21 +26,29 @@ export default function Goal() {
         <div>
             <Header title={'HabiPets'} />
             <h1 className="Title">Goal for {type} habit</h1>
-            <form className="FormContent" onSubmit={(e) => {
+            <form onSubmit={(e) => {
                 formValidation(e);
-            }}>
-                <label htmlFor="habit">Habit:</label>
-                <input
-                    type={'text'}
-                    id="habit"
-                    placeholder="Enter your Habit here..."
-                    className='HabitInput'
-                />
-                <label htmlFor="frequency">Frequency:</label>
-                <input id='frequency' type='range' min='1' max='7' onChange={(e) => {setFrequency(e.target.value)}} value={frequency}></input>
-                <span>{frequency}</span>
-                <span>test</span>
-                <button type="submit">Create My Habit</button>
+            }}> <div className="FormContent" >
+                    <div className='OuterBox'>
+                        <div className='InnerBox'>
+                            <label htmlFor="habit">Habit:</label>
+                            <span
+                                id="habit"
+                                className='HabitInput'
+                                role="textbox"
+                                contentEditable>
+                            </span>
+                        </div>
+                        <div className='InnerBox'>
+                            <label htmlFor="frequency">Frequency (per week):</label>
+                            <input id='frequency' type='range' min='1' max='7' onChange={(e) => {setFrequency(e.target.value)}} value={frequency}></input>
+                            <span>{frequency}</span>
+                        </div>
+                    </div>
+                </div>
+                <div className='InnerBox'>
+                    <button type="submit">Create My Habit</button>
+                </div>
             </form>
         </div>
     );

@@ -6,9 +6,6 @@
 .FormContent {
     color: black;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px;
     flex-direction: column;
     gap: 25px;
 }
@@ -19,5 +16,27 @@
     resize: none;
     outline: none;
     font-size: 28px;
+    max-height: 200px;
+    width: 40vw;
+    overflow: scroll;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.HabitInput[contenteditable]:empty::before {
+    content: "Enter your Habit here...";
+    color: gray;
+  }
+
+.OuterBox {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.InnerBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
