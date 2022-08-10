@@ -7,7 +7,7 @@ const Intro = () => {
     useEffect(() => {
         let current = 1
         const cycleReviews = () => {
-            if (current === 5) {
+            if (current === 4) {
                 current = 1
             } else {
                 current += 1

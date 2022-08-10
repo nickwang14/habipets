@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types'
+import './Log.css'
 
 function Log({ streak, onClick, lastLog }) {
     return (
         <div>
-            <button onClick={onClick}> Log Your Habit </button>
-            <p> Your current streak is {streak} </p>
-            <p> You logged your last Habit on {lastLog} </p>
+            <div className="buttonDiv">
+                <button className="buttonLog" onClick={onClick}> Log Your Habit </button>
+            </div>
+            <p className="pushin-p"> Your current streak is {streak} </p>
+            <p className="pushin-p"> You logged your last Habit on {lastLog} </p>
         </div>
     )
 }
