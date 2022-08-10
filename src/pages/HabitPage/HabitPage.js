@@ -299,9 +299,9 @@ export default function HabitPage() {
             } else {
                 alert('You have not started a streak yet, press start to commence your journey!');
             }
-            
-            
-        } catch(err) {
+
+
+        } catch (err) {
             console.log(err)
         }
 
@@ -437,13 +437,13 @@ export default function HabitPage() {
             const tracker = await gameContract.tracker(walletAddress);
             console.log(tracker);
 
-            if(tracker.started) {
+            if (tracker.started) {
                 alert(`You have ${tracker.isGood ? 'a good' : 'an evil'} pet with a current streak of ${tracker.streak} and a longest streak of ${tracker.longestStreak}`)
             } else {
                 alert("You haven't started a streak yet, press start to commence your journey!")
             }
 
-        } catch(err) {
+        } catch (err) {
             alert('track function could not run successfully' + err);
             return false;
         }
@@ -991,17 +991,18 @@ export default function HabitPage() {
         try {
             const tracker = await gameContract.tracker(walletAddress);
 
-            if(tracker.started) {
+            if (tracker.started) {
                 const mint = await mintWithSigner.claimPet();
                 console.log(mint);
                 alert('You just claimed your pet, great work!')
             } else {
                 alert("You haven't started a streak yet, press start to commence your journey!")
             }
-        } catch(err) {
+        } catch (err) {
             alert('track function could not run successfully' + err);
             return false;
-        }}
+        }
+    }
     const balanceTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
@@ -1543,17 +1544,18 @@ export default function HabitPage() {
         try {
             const tracker = await gameContract.tracker(walletAddress);
 
-            if(tracker.started) {
+            if (tracker.started) {
                 const balanceOf = await mintContract.balanceOf(walletAddress);
                 setTokenId(parseInt(balanceOf, 16));
                 alert(`You have token ID #${tokenId}`)
             } else {
                 alert("You haven't started a streak yet, press start to commence your journey!")
             }
-        } catch(err) {
+        } catch (err) {
             alert('balance function could not run successfully' + err);
             return false;
-        }}
+        }
+    }
     const petTypeTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
@@ -1990,16 +1992,17 @@ export default function HabitPage() {
             <Header title={'HabiPets'} />
             <h1 className="divCenter">Your {value.habitType} Habit: {value.habitName}</h1>
             <CalendarModal />
-            
+
             <div className="divCenter">
-                <button className="habitPageButton"  onClick={startTx}>Start</button>
-                <button className="habitPageButton"  onClick={logTx}>Log</button>
-                <button className="habitPageButton"  onClick={trackTx}>Track</button>
-                <button className="habitPageButton"  onClick={claimTx}>Claim</button>
-                <button className="habitPageButton"  onClick={balanceTx}>Get Token Id</button>
-                <button className="habitPageButton"  onClick={petTypeTx}>Get Pet Type</button>
+                <button className="habitPageButton" onClick={startTx}>Start</button>
+                <button className="habitPageButton" onClick={logTx}>Log</button>
+                <button className="habitPageButton" onClick={trackTx}>Track</button>
+                <button className="habitPageButton" onClick={claimTx}>Claim</button>
+                <button className="habitPageButton" onClick={balanceTx}>Get Token Id</button>
+                <button className="habitPageButton" onClick={petTypeTx}>Get Pet Type</button>
             </div>
             <Log streak={streak} lastLog={lastLog} />
+            <img src="/BadPet.gif"></img>
         </div>
     )
 }
