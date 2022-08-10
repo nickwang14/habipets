@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './NftBox.css';
-import  Context  from 'ContextProvider';
+import { AppContext } from 'ContextProvider';
 import { HabitType } from 'consts';
 import GoodPet from 'assets/GoodNft.png'
 import BadPet from 'assets/BadNft.png'
 
 export default function NftBox({ type }) {
     return (
-        <Context.Consumer>
+        <AppContext.Consumer>
             {({ setHabitType }) => (
                 <div className="NftBoxContainer">
                     <Link
@@ -33,7 +33,7 @@ export default function NftBox({ type }) {
                     </Link>
                 </div>
             )}
-        </Context.Consumer>
+        </AppContext.Consumer>
     );
 }
 

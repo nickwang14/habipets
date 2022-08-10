@@ -14,7 +14,7 @@ export const Provider = ({ children }) => {
         pets: state.pets,
         todoList: state.todoList,
         pickHabitType: (habitType) => {
-            dispatch({ type: actions.PICK_HABIT_TYPE, habitType})
+            dispatch({ type: actions.PICK_HABIT_TYPE, habitType })
         },
         addTodoItem: (todoItemLabel) => {
             dispatch({ type: actions.ADD_TODO_ITEM, todoItemLabel })
