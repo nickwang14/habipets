@@ -4,7 +4,6 @@
 }
 
 .buttonCalendar {
-    background-color: #bab4ca;
     border-radius: 10px;
     border: 2px solid #231942;
     box-shadow: 0 0 0 0 inset;
@@ -16,7 +15,8 @@
         sans-serif;
     font-size: 17px;
     font-weight: 400;
-    line-height: 1.15385;
+    max-height: 100px;
+    max-width:100px;
     margin-bottom: 10px;
     outline: none;
     padding: 8px 0.8em;
@@ -28,6 +28,13 @@
     touch-action: manipulation;
     vertical-align: baseline;
     white-space: nowrap;
+}
+
+.buttonCalendar > img {
+    max-width:100%;
+    max-height:100%;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .buttonCalendar:hover,

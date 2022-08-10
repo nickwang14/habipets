@@ -29,7 +29,6 @@ h1 {
 label {
     box-shadow: 0 0 0 0 inset;
     box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.8);
     display: inline-block;
     font-family: -apple-system, system-ui, 'Segoe UI', 'Liberation Sans',
         sans-serif;

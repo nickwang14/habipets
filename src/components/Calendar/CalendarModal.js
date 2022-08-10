@@ -1,6 +1,7 @@
 import Modal from 'react-modal'
 import { useState } from 'react'
 import Calendar from 'react-calendar'
+import calendar from 'assets/calendar.png'
 // import 'react-calendar/dist/Calendar.css'
 import './Calendar.css'
 
@@ -37,7 +38,9 @@ export default function CalendarModal() {
     return (
         <div>
             <div className="modalDiv">
-                <button className="buttonCalendar" onClick={openModal}>Open Modal</button>
+                <button className="buttonCalendar" onClick={openModal}>
+                    <img  src={calendar} />
+                </button>
             </div>
             <Modal
                 isOpen={modalIsOpen}
