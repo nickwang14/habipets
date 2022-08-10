@@ -9,7 +9,7 @@ export default function HabitPage() {
     //const [ user, setUser ] = useState()
     const [lastLog, setLastLog] = useState(' Never ')
     const [streak, setStreak] = useState(0)
-    const { habitType }=useContext(AppContext)
+    const { habitType } = useContext(AppContext)
 
     const handleLog = () => {
         setStreak(streak + 1)
@@ -20,9 +20,9 @@ export default function HabitPage() {
     return (
         <div>
             <Header title={'HabiPets'} />
-            <h1>{habitType} Habit</h1>
+            <h1 className="habitHeader">{habitType} Habit</h1>
             <CalendarModal />
             <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
-        </div> 
+        </div>
     )
 }

@@ -1,6 +1,12 @@
 .buttonDiv {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
+}
+
+.pushin-p {
+    display: flex;
+    justify-content: center;
 }
 
 .buttonLog {
