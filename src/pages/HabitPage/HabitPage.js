@@ -1991,7 +1991,7 @@ export default function HabitPage() {
     }
 
     return (
-        <div>
+        <div style={{display:'flex', flexDirection:'column'}}>
             <Header title={'HabiPets'} />
             <h1 className="divCenter">Your {value.habitType} Habit: {value.habitName}</h1>
             <CalendarModal />
@@ -2005,7 +2005,12 @@ export default function HabitPage() {
                 <button className="habitPageButton" onClick={petTypeTx}>Get Pet Type</button>
             </div>
             <Log streak={streak} lastLog={lastLog} />
-            <img src={PetGif}></img>
+            <div className='NftBox'>
+                <img
+                    src={PetGif}
+                    className="NftImage"
+                />
+            </div>
         </div>
     )
 }
