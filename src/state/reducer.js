@@ -18,26 +18,26 @@ export const actions = {
 
 export const reducer = (state, action) => {
     if (action.type === actions.PICK_HABIT_TYPE) {
-        return { habitType: state.habitType };
+        return { habitType: action.value };
     } else if (action.type === actions.ADD_TODO_ITEM) {
         return {
             todoList: [
                 ...state.todoList,
                 {
                     id: new Date().valueOf(),
-                    label: action.todoItemLabel,
+                    label: action.value,
                     completed: false
                 }
             ]
         };
     } else if (action.type === actions.REMOVE_TODO_ITEM) {
         const filteredTodoItem = state.todoList.filter(
-            (todoItem) => todoItem.id !== action.todoItemId
+            (todoItem) => todoItem.id !== action.value
         )
         return { todoList: filteredTodoItem };
     } else if (action.type === actions.TOGGLE_COMPLETED) {
         const updatedTodoList = state.todoList.map((todoItem) =>
-            todoItem.id === action.todoItemId
+            todoItem.id === action.value
                 ? { ...todoItem, completed: !todoItem.completed }
                 : todoItem
         )

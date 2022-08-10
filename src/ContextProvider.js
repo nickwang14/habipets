@@ -14,16 +14,16 @@ export const Provider = ({ children }) => {
         pets: state.pets,
         todoList: state.todoList,
         pickHabitType: (habitType) => {
-            dispatch({ type: actions.PICK_HABIT_TYPE, habitType })
+            dispatch({ type: actions.PICK_HABIT_TYPE, value: habitType })
         },
         addTodoItem: (todoItemLabel) => {
-            dispatch({ type: actions.ADD_TODO_ITEM, todoItemLabel })
+            dispatch({ type: actions.ADD_TODO_ITEM, value: todoItemLabel })
         },
         removeTodoItem: (todoItemId) => {
-            dispatch({ type: actions.REMOVE_TODO_ITEM, todoItemId })
+            dispatch({ type: actions.REMOVE_TODO_ITEM, value: todoItemId })
         },
         markAsCompleted: (todoItemId) => {
-            dispatch({ type: actions.TOGGLE_COMPLETED, todoItemId })
+            dispatch({ type: actions.TOGGLE_COMPLETED, value: todoItemId })
         }
     }
 
