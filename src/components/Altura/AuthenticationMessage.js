@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import authenticate from '../../axios/authenticate'
 import './altura.css'
-=======
 import authenticate from 'axios/authenticate'
->>>>>>> main
 import { bool } from 'prop-types';
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
