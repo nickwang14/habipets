@@ -4,4 +4,5 @@ import { post } from '../../utilties'
 
 export const handleMint = async ( { item, mint } ) => {
     return await post('https://api.alturanft.com/api/v2/', { item, mint })
+        .then((response) => response.data)
 }
