@@ -9,6 +9,7 @@
     text-decoration: none;
     display: flex;
     justify-content: center;
+
 }
 
 .image {
@@ -55,12 +56,8 @@
   color: #231942;
 }
 
-.button:focus {
-  box-shadow: 0 0 0 4px #231942;
-}
-
 .button:active {
-  background-color: #231942;
+  background-color: #5e5183;
   box-shadow: none;
   color: #231942;
 }
