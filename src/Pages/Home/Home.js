@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <Header title={'HabiPets'} />
-            <h1>Welcome</h1>
+            <h1 className='Title'>Welcome</h1>
             <Intro />
             <div className="NftFlexBox">
                 <NftBox type={HabitType.GOOD} />
