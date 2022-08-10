@@ -16,7 +16,7 @@ export default function NftBox({ type }) {
                         onClick={() => setHabitType(type)}
                         className="NftBoxLink"
                     >
-                        <div className={`${type}NftBox`}>
+                        <div className='NftBox'>
                             <img
                                 src={type === HabitType.GOOD ? GoodPet : BadPet}
                                 alt={`${type} Pet`}
