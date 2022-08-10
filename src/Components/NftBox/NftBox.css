@@ -1,16 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat&display=swap");
 
-.GoodNftBox {
+.NftBox {
   width: 292px;
   height: 415px;
-  background: #231942;
-  border-radius: 25px;
-}
-
-.BadNftBox {
-  width: 292px;
-  height: 415px;
-
   background: #231942;
   border-radius: 25px;
 }
@@ -30,7 +22,7 @@
   line-height: 29px;
   margin: 10px 10px 0 0;
   padding: 5px 10px;
-  text-align: center;
+  text-align: middle;
   color: rgba(255, 255, 255, 0.8);
 }
 
