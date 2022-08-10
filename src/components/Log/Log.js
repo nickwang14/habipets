@@ -4,9 +4,11 @@ import './Log.css'
 function Log({ streak, onClick, lastLog }) {
     return (
         <div>
-            <button className="buttonLog" onClick={onClick}> Log Your Habit </button>
-            <p> Your current streak is {streak} </p>
-            <p> You logged your last Habit on {lastLog} </p>
+            <div className="buttonDiv">
+                <button className="buttonLog" onClick={onClick}> Log Your Habit </button>
+            </div>
+            <p className="buttonDiv"> Your current streak is {streak} </p>
+            <p className="buttonDiv"> You logged your last Habit on {lastLog} </p>
         </div>
     )
 }

@@ -1,3 +1,8 @@
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+}
+
 .buttonLog {
     background-color: #bab4ca;
     border-radius: 10px;
