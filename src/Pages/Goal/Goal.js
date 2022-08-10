@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { Header } from '../../Exports';
 import { HabitContext } from '../../HabitContext';
+import TextareaAutosize from 'react-textarea-autosize';
 import './Goal.css';
 
 export default function Goal() {
@@ -37,12 +38,8 @@ export default function Goal() {
                             <div className='OuterBox'>
                                 <div className='InnerBox'>
                                     <label htmlFor="habit">Habit:</label>
-                                    <span
-                                        id="habit"
-                                        className='HabitInput'
-                                        role="textbox"
-                                        contentEditable>
-                                    </span>
+                                    <TextareaAutosize id="habit"
+                                        className='HabitInput' placeholder='Write your Habit here...' maxRows={5}/>
                                 </div>
                                 <div className='InnerBox'>
                                     <label htmlFor="frequency">Frequency (per week):</label>
