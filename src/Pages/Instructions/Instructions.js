@@ -5,6 +5,7 @@ import { HabitContext } from '../../HabitContext';
 import { Link } from 'react-router-dom';
 import Authenticate from '../../Components/Altura/AuthenticationMessage';
 import BeginHabit from '../../Components/Altura/assignParent';
+import { useAccount } from 'wagmi';
 
 export default function Instructions() {
     const { address } = useAccount();
