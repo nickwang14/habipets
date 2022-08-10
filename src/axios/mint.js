@@ -1,4 +1,4 @@
-import { post } from '../../utilties'
+import { post } from './utilities'
 
 //allows user to mint an NFT which will then be transfered to them
 
