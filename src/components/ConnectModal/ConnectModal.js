@@ -1,25 +1,25 @@
 import { useState } from 'react'
-import Modal from 'react-modal';
+import Modal from 'react-modal'
 import './ConnectModal.css'
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#connectModal');
+Modal.setAppElement('#connectModal')
 
 export const ConnectModal = () => {
-    let subtitle;
-    const [modalIsOpen, setIsOpen] = useState(false);
+    let subtitle
+    const [modalIsOpen, setIsOpen] = useState(false)
 
     function openModal() {
-        setIsOpen(true);
+        setIsOpen(true)
     }
 
     function afterOpenModal() {
     // references are now sync'd and can be accessed.
-        subtitle.style.color = '#f00';
+        subtitle.style.color = '#f00'
     }
 
     function closeModal() {
-        setIsOpen(false);
+        setIsOpen(false)
     }
 
     return (
@@ -30,7 +30,7 @@ export const ConnectModal = () => {
                 onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
                 className='.content'
-                contentLabel="Example Modal"
+                contentLabel='Example Modal'
             >
                 <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
                 <button onClick={closeModal}>close</button>
@@ -44,5 +44,5 @@ export const ConnectModal = () => {
                 </form>
             </Modal>
         </div>
-    );
+    )
 }

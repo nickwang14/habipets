@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 function Log({ streak, onClick, lastLog }) {
     return (
@@ -7,13 +7,13 @@ function Log({ streak, onClick, lastLog }) {
             <p> Your current streak is {streak} </p>
             <p> You logged your last Habit on {lastLog} </p>
         </div>
-    );
+    )
 }
 
-export default Log;
+export default Log
 
 Log.propTypes = {
     streak: PropTypes.number,
     onClick: PropTypes.func,
     lastLog: PropTypes.string,
-};
+}
