@@ -25,7 +25,7 @@
     grid-row: 1;
     line-height: 1.2;
     text-align: center;
-    transition: transform 1s;
+    transition: transform 0.5s;
   }
   .carousel__item.active {
     transform: translateX(0);
