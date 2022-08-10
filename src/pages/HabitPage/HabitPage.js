@@ -5,6 +5,7 @@ import Log from 'components/Log/Log'
 import { AppContext } from 'ContextProvider';
 import { ethers } from 'ethers';
 import { useAccount } from 'wagmi';
+import PetGif from './BadPet.gif'
 import './HabitPage.css'
 
 export default function HabitPage() {
@@ -2004,7 +2005,7 @@ export default function HabitPage() {
                 <button className="habitPageButton" onClick={petTypeTx}>Get Pet Type</button>
             </div>
             <Log streak={streak} lastLog={lastLog} />
-            <img src="./BadPet.gif"></img>
+            <img src={PetGif}></img>
         </div>
     )
 }
