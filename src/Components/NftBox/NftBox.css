@@ -27,6 +27,11 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
+.NftBox:hover,
+.NftImage:hover {
+    background: #8479a5;
+}
+
 .NftBoxTextDiv {
     display: flex;
     justify-content: center;
