@@ -5,7 +5,7 @@ export const initialState = {
     pets: [],
     todoList: []
 }
-  
+
 export const actions = {
     PICK_HABIT_TYPE: 'PICK_HABIT_TYPE',
     CONNECT_WALLET: 'CONNECT_WALLET',
@@ -17,13 +17,9 @@ export const actions = {
 }
 
 export const reducer = (state, action) => {
-    switch (action.type) {
-    case actions.PICK_HABIT_TYPE:
-        
-        return {
-            habitType: action.habitType
-        }
-    case actions.ADD_TODO_ITEM:
+    if (action.type === actions.PICK_HABIT_TYPE) {
+        return { habitType: state.habitType };
+    } else if (action.type === actions.ADD_TODO_ITEM) {
         return {
             todoList: [
                 ...state.todoList,
@@ -33,22 +29,20 @@ export const reducer = (state, action) => {
                     completed: false
                 }
             ]
-        }
-    case actions.REMOVE_TODO_ITEM: {
+        };
+    } else if (action.type === actions.REMOVE_TODO_ITEM) {
         const filteredTodoItem = state.todoList.filter(
             (todoItem) => todoItem.id !== action.todoItemId
         )
-        return { todoList: filteredTodoItem }
-    }
-    case actions.TOGGLE_COMPLETED: {
+        return { todoList: filteredTodoItem };
+    } else if (action.type === actions.TOGGLE_COMPLETED) {
         const updatedTodoList = state.todoList.map((todoItem) =>
             todoItem.id === action.todoItemId
                 ? { ...todoItem, completed: !todoItem.completed }
                 : todoItem
         )
-        return { todoList: updatedTodoList }
-    }
-    default:
-        return state
+        return { todoList: updatedTodoList };
+    } else {
+        return state;
     }
 }

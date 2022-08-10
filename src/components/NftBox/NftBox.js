@@ -9,11 +9,11 @@ import BadPet from 'assets/BadNft.png'
 export default function NftBox({ type }) {
     return (
         <AppContext.Consumer>
-            {({ setHabitType }) => (
+            {({ pickHabitType }) => (
                 <div className="NftBoxContainer">
                     <Link
                         to={'/Instructions'}
-                        onClick={() => setHabitType(type)}
+                        onClick={() => pickHabitType(type)}
                         className="NftBoxLink"
                     >
                         <div className='NftBox'>
