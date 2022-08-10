@@ -9,9 +9,8 @@
 }
 
 .NftImage {
-    max-width: 292px;
-    max-height: 283px;
-    width: 40vw;
+    height: 292px;
+    width: 292px;
     background: #231942;
     border-radius: 25px;
 }

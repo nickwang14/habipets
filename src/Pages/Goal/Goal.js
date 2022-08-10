@@ -7,12 +7,14 @@ import './Goal.css';
 
 export default function Goal() {
     let navigate = useNavigate();
-
     const formValidation = (event) => {
         event.preventDefault();
-        const habit = document.getElementById('habit').innerHTML;
-        console.log(habit)
+        const habit = event.target.habit.value;
         const frequency = event.target.frequency.value;
+        if (habit == '') {
+            alert('Please enter a habit');
+            return false;
+        }
         alert('Submit Form Data to Altura: ' + habit + ' : ' + frequency);
         const success = true; //success pushing to altura
         if (success) {
@@ -20,11 +22,8 @@ export default function Goal() {
         } else {
             alert('Form Data submission failed please try again')
         }
-
     }
-
     const [frequency, setFrequency] = useState(1);
-
     return (
         <HabitContext.Consumer>
             {({ habitType }) => (
