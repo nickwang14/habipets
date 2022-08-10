@@ -20,7 +20,7 @@ export default function HabitPage() {
     return (
         <div>
             <Header title={'HabiPets'} />
-            <h1>{value.habitType} Habit</h1>
+            <h1 className="habitHeader">{value.habitType} Habit</h1>
             <CalendarModal />
             <Log streak={streak} onClick={handleLog} lastLog={lastLog} />
         </div>
