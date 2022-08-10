@@ -17,12 +17,11 @@
 .authenticate {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 70px;
 }
 
 .begin {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }

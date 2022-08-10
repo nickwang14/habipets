@@ -5,10 +5,8 @@ import { HabitContext } from '../../HabitContext';
 import { Link } from 'react-router-dom';
 import Authenticate from '../../Components/Altura/AuthenticationMessage';
 import BeginHabit from '../../Components/Altura/assignParent';
-import { useAccount } from 'wagmi';
 
 export default function Instructions() {
-    const { address } = useAccount();
     return (
         <HabitContext.Consumer>
             {({ habitType }) => (
@@ -16,9 +14,8 @@ export default function Instructions() {
                     <Header title={'HabiPets'} />
                     <h1 className="Title">Select a {habitType} Habit</h1>
                     <p className="Body">Placeholder Instructions</p>
-                    <span>{address ? address : 'no wallet connected'}</span>
-                    <Authenticate />
-                    <BeginHabit style={{ display: 'flex' }} />
+                    <div className="authenticate"><Authenticate /></div>
+                    <div className="begin"><BeginHabit style={{ display: 'flex' }} /></div>
                     <div className="NextPageBox">
                         <Link to={'/Goal'}>Enter your Habit Details-&gt;</Link>
                     </div>
