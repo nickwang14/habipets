@@ -36,7 +36,9 @@ export default function CalendarModal() {
 
     return (
         <div>
-            <button className="buttonCalendar" onClick={openModal}>Open Modal</button>
+            <div className="modalDiv">
+                <button className="buttonCalendar" onClick={openModal}>Open Modal</button>
+            </div>
             <Modal
                 isOpen={modalIsOpen}
                 // onAfterOpen={afterOpenModal}
