@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import {useState} from 'react';
 import { Header } from '../../Exports';
 import { HabitContext } from '../../HabitContext';
 import './Goal.css';
@@ -20,39 +21,37 @@ export default function Goal() {
 
     }
 
+    const [frequency, setFrequency] = useState(1);
+
     return (
         <HabitContext.Consumer>
             {({ habitType }) => (
                 <div>
                     <Header title={'HabiPets'} />
-                    <h1 className="Title">Goal for {habitType} habit</h1>
-                    <form className="FormContent" onSubmit={(e) => {
+                    <h1 className="Title">Goal for {type} habit</h1>
+                    <form onSubmit={(e) => {
                         formValidation(e);
-                    }}>
-                        <div>
-                            <label htmlFor="habit">Habit:</label>
-                            <input
-                                type={'text'}
-                                id="habit"
-                                placeholder="Enter your Habit here..."
-                            />
+                    }}> <div className="FormContent" >
+                            <div className='OuterBox'>
+                                <div className='InnerBox'>
+                                    <label htmlFor="habit">Habit:</label>
+                                    <span
+                                        id="habit"
+                                        className='HabitInput'
+                                        role="textbox"
+                                        contentEditable>
+                                    </span>
+                                </div>
+                                <div className='InnerBox'>
+                                    <label htmlFor="frequency">Frequency (per week):</label>
+                                    <input id='frequency' type='range' min='1' max='7' onChange={(e) => {setFrequency(e.target.value)}} value={frequency}></input>
+                                    <span>{frequency}</span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor="frequency">Frequency:</label>
-                            <select id="frequency">
-                                <option>1x</option>
-                                <option>2x</option>
-                                <option>3x</option>
-                                <option>4x</option>
-                                <option>5x</option>
-                                <option>6x</option>
-                                <option>7x</option>
-                                <option>8x</option>
-                                <option>9x</option>
-                                <option>10x</option>
-                            </select>
+                        <div className='InnerBox'>
+                            <button type="submit">Create My Habit</button>
                         </div>
-                        <button type="submit">Create My Habit</button>
                     </form>
                 </div>
             )}

@@ -1,17 +1,13 @@
-  * {
+  .Intro {
+    font-size: 16px;
+    align-items: center;
+    display: grid;
+    height: 17vh;
+    font-family: system-ui;
+    justify-content: center;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  html {
-    font-size: 16px;
-  }
-  .App {
-    align-items: center;
-    display: grid;
-    height: 30vh;
-    font-family: system-ui;
-    justify-content: center;
   }
   .carousel__list {
     align-items: center;
@@ -29,7 +25,7 @@
     grid-row: 1;
     line-height: 1.2;
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.5s;
   }
   .carousel__item.active {
     transform: translateX(0);

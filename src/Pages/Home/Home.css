@@ -5,12 +5,12 @@
   align-items: center;
 }
 
-.ConnectButton {
-  left: 50%;
-  position: absolute;
-}
-
 .Welcome {
   color: black;
   text-align: center;
+}
+
+.Title {
+    color: black;
+    text-align: center;
 }
