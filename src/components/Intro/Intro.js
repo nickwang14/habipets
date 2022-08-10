@@ -27,11 +27,7 @@ const Intro = () => {
         },
         {
             quote:
-                'In order to design successful habits and change your behaviors, you should do three things. Stop judging yourself. Take your aspirations and break them down into tiny behaviors. Embrace mistakes as discoveries and use them to move forward.',
-        },
-        {
-            quote:
-                'There are only three things we can do that will create lasting change have an epiphany, change our environment, or change our habits in tiny ways.',
+                'There are only three things we can do that will create lasting change; have an epiphany, change our environment, or change our habits in tiny ways.',
         },
         {
             quote:
