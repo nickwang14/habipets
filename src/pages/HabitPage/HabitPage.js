@@ -6,6 +6,7 @@ import { AppContext } from 'ContextProvider';
 import { ethers } from 'ethers';
 import { useAccount } from 'wagmi';
 import PetGif from './BadPet.gif'
+import PetBaseGif from './PetBase.gif'
 import EggGif from './egg.gif'
 import './HabitPage.css'
 
@@ -2008,6 +2009,7 @@ export default function HabitPage() {
             <Log streak={streak} lastLog={lastLog} />
             <div className='HabitNftBox'>
                 <img src={EggGif} className="HabitNftImage" />
+                <img src={PetBaseGif} className="HabitNftImage" />
                 <img
                     src={PetGif}
                     className="HabitNftImage"
