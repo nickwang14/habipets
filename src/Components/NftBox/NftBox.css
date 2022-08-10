@@ -10,7 +10,7 @@
 
 .NftImage {
     height: 292px;
-    width: 292px;
+    width: 282px;
     background: #231942;
     border-radius: 25px;
 }
@@ -24,6 +24,20 @@
     padding: 5px 10px;
     text-align: middle;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.NftBox,
+.NftImage {
+    border: 5px solid transparent;
+}
+
+.NftBox:hover {
+    background: #8479a5;
+    border: 5px solid #231942;
+}
+
+.NftBox:hover .NftImage {
+    background: #8479a5;
 }
 
 .NftBoxTextDiv {
