@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+.buttonText {
+    color: black;
+}
+
 button {
     color: rgba(255, 255, 255, 0.8);
     background-color: #bab4ca;
@@ -12,7 +16,6 @@ button {
     cursor: pointer;
     display: inline-block;
     font-family: 'Montserrat';
-    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0;
     font-style: normal;
     font-weight: bold;
     margin: 0;
@@ -23,19 +26,19 @@ button {
     text-decoration: none;
     user-select: none;
     -webkit-user-select: none;
-    touch-action: manipulation; 
+    touch-action: manipulation;
     vertical-align: baseline;
     white-space: nowrap;
     transition: transform 0.2s;
-  }
-  
-  button:hover,
-  button:focus {
+}
+
+button:hover,
+button:focus {
     background-color: #8479a5;
     transform: scale(1.07);
-  }
-  
-  button:active {
+}
+
+button:active {
     background-color: #5e5183;
     box-shadow: none;
-  }
+}

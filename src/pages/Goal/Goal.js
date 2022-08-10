@@ -30,7 +30,7 @@ export default function Goal() {
                 <div>
                     <Header title={'HabiPets'} />
                     <h1 className="Title">Goal for {habitType} habit</h1>
-                    <form id='HabitForm' 
+                    <form id='HabitForm'
                         onSubmit={(e) => {
                             formValidation(e);
                         }}> <div className="FormContent" >
@@ -38,7 +38,7 @@ export default function Goal() {
                                 <div className='InnerBox'>
                                     <label htmlFor="habit">Habit:</label>
                                     <TextareaAutosize id="habit"
-                                        className='HabitInput' placeholder='Write your Habit here...' maxRows={5}/>
+                                        className='HabitInput' placeholder='Write your Habit here...' maxRows={5} />
                                 </div>
                                 <div className='InnerBox'>
                                     <label htmlFor="frequency">Frequency (per week):</label>
