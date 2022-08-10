@@ -12,12 +12,12 @@ const BeginHabit = () => {
             } // fetching items with the specified collection address only
         )
         console.log(response)
-        return 
+        return
     };
 
     return (
-        <div style={{display: 'flex'}}>
-            <button onClick = {handleBegin}>
+        <div style={{ display: 'flex' }}>
+            <button className="button" onClick={handleBegin}>
                 Begin!
             </button>
         </div>
