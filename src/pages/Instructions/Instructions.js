@@ -4,24 +4,21 @@ import './Instructions.css'
 import Header from 'components/Header/Header'
 import { AppContext } from 'ContextProvider'
 import { Link } from 'react-router-dom'
-import Authenticate from 'components/Altura/AuthenticationMessage'
-import BeginHabit from 'components/Altura/assignParent'
+import { useAccount } from 'wagmi'
 
 export default function Instructions() {
     const { habitType } = useContext(AppContext)
-
-    return (
-        <div>
-            <Header title={'HabiPets'} />
-            <h1 className='Title'>Select a {habitType} Habit</h1>
-            <p className='Body'>Placeholder Instructions</p>
-            <div className='authenticate'><Authenticate /></div>
-            <div className='begin'><BeginHabit style={{ display: 'flex' }} /></div>
-            <div className='NextPageBox'>
-                <Link to={'/Goal'}><button className="buttonHabit">Enter your Habit Details</button></Link>
+    const walletAddress = useAccount();
+    if (!walletAddress)
+        return (
+            <div>
+                <Header title={'HabiPets'} />
+                <h1 className='Title'>Select a {habitType} Habit</h1>
+                <div className='NextPageBox'>
+                    <Link to={'/Goal'}><button className="buttonHabit">Enter your Habit Details</button></Link>
+                </div>
             </div>
-        </div>
-    )
+        )
 }
 
 Instructions.propTypes = {
