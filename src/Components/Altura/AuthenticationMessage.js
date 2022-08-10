@@ -1,6 +1,7 @@
 import authenticate from '../../axios/authenticate'
 import { bool } from 'prop-types';
 import { useState } from 'react';
+import { useAccount } from 'wagmi';
 
 const AuthenticationMessage = ({ isAuthenticated }) => {
     if (isAuthenticated) {
@@ -15,19 +16,12 @@ AuthenticationMessage.propTypes = {
 }
 
 const Authenticate = () => {
-    const [address, setAddress] = useState();
+    const {address} = useAccount();
     const [guard, setGuard] = useState();
     // const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     return (
         <div>
-            <input
-                type="text"
-                id="userAddress"
-                name="message"
-                onChange={(event) => setAddress(event.target.value)}
-                value={address}
-            />
             <input
                 type="text"
                 id="guardCode"
