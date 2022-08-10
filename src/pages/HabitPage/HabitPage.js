@@ -857,7 +857,7 @@ export default function HabitPage() {
     return (
         <div>
             <Header title={'HabiPets'} />
-            <h1>{value.habitType} Habit</h1>
+            <h1 className="divCenter">{value.habitType} Habit</h1>
             <CalendarModal />
             <div className="divCenter">
                 <button className="habitPageButton" onClick={startTx}>Start</button>
