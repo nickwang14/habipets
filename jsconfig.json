@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"],
+  "paths": {
+    "assets/*": ["./assets/*"],
+    "axios/*": ["./axios/*"],
+    "components/*": ["./components/*"],
+    "pages/*": ["./pages/*"],
+    "state/*": ["./state/*"]
+  }
+}

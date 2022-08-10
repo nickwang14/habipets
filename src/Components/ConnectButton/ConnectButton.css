@@ -1,0 +1,41 @@
+.ConnectButton {
+    /* text-decoration: none; */
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #bab4ca;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Montserrat';
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0;
+    outline: none;
+    padding: 15px 1em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation; 
+    vertical-align: baseline;
+    white-space: nowrap;
+    transition: transform 0.2s;
+  }
+  
+  button:hover,
+  button:focus {
+    background-color: #8479a5;
+    transform: scale(1.07);
+  }
+  
+  button:active {
+    background-color: #5e5183;
+    box-shadow: none;
+  }
