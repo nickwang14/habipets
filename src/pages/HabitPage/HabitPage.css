@@ -50,13 +50,23 @@
 }
 
 
-.NftBox{
+.HabitNftBox{
     width: 100%;
     margin: 0 auto;
     display: flex;
+    max-width: 292px;
+    max-height: 415px;
+    width: 40vw;
+    background: #231942;
+    border-radius: 25px;
 }
 
-.NftImage {
+.HabitNftImage {
+    max-width: 282px;
+    max-height: 283px;
+    width: 38vw;
+    background: #231942;
+    border-radius: 25px;
     margin: 0 auto;
     border: min(1vw, 5px) solid transparent;
     

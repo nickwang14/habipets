@@ -2006,11 +2006,11 @@ export default function HabitPage() {
                 <button className="habitPageButton" onClick={petTypeTx}>Get Pet Type</button>
             </div>
             <Log streak={streak} lastLog={lastLog} />
-            <div className='NftBox'>
-                <img src={EggGif} className="NftImage" />
+            <div className='HabitNftBox'>
+                <img src={EggGif} className="HabitNftImage" />
                 <img
                     src={PetGif}
-                    className="NftImage"
+                    className="HabitNftImage"
                 />
 
             </div>
