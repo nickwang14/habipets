@@ -11,7 +11,7 @@
 .NftImage {
     max-width: 282px;
     max-height: 283px;
-    width: 40vw;
+    width: 38vw;
     background: #231942;
     border-radius: 25px;
 }
@@ -29,12 +29,12 @@
 
 .NftBox,
 .NftImage {
-    border: 5px solid transparent;
+    border: min(1vw, 5px) solid transparent;
 }
 
 .NftBox:hover {
     background: #8479a5;
-    border: 5px solid #231942;
+    border: min(1vw, 5px) solid #231942;
 }
 
 .NftBox:hover .NftImage {
