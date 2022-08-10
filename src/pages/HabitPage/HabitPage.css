@@ -50,10 +50,17 @@
 }
 
 
+.NftBox{
+    width: 100%
+}
 .NftBox,
 .NftImage {
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: middle;
     border: min(1vw, 5px) solid transparent;
-    display: flex;
+    
 }
 
 .NftBox:hover {
