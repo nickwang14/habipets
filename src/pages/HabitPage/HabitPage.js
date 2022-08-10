@@ -6,6 +6,7 @@ import { AppContext } from 'ContextProvider';
 import { ethers } from 'ethers';
 import { useAccount } from 'wagmi';
 import PetGif from './BadPet.gif'
+import EggGif from './egg.gif'
 import './HabitPage.css'
 
 export default function HabitPage() {
@@ -1991,7 +1992,7 @@ export default function HabitPage() {
     }
 
     return (
-        <div style={{display:'flex', flexDirection:'column'}}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
             <Header title={'HabiPets'} />
             <h1 className="divCenter">Your {value.habitType} Habit: {value.habitName}</h1>
             <CalendarModal />
@@ -2006,10 +2007,12 @@ export default function HabitPage() {
             </div>
             <Log streak={streak} lastLog={lastLog} />
             <div className='NftBox'>
+                <img src={EggGif} className="NftImage" />
                 <img
                     src={PetGif}
                     className="NftImage"
                 />
+
             </div>
         </div>
     )

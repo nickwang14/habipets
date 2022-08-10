@@ -49,18 +49,16 @@
     color: #231942;
 }
 
-
-.NftBox{
-    width: 100%
+.NftBox {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: center;
 }
-.NftBox,
 .NftImage {
-    display: block;
     margin: 0 auto;
     justify-content: center;
     text-align: middle;
     border: min(1vw, 5px) solid transparent;
-    
 }
 
 .NftBox:hover {
@@ -81,11 +79,11 @@
     text-decoration: none;
 }
 
-.NftBoxContainer:hover, .NftBoxContainer:focus {
+.NftBoxContainer:hover,
+.NftBoxContainer:focus {
     transition: transform 0.3s;
     cursor: pointer;
     transform: scale(1.07);
     border-radius: 25px;
     transition: transform 0.35s;
 }
-
