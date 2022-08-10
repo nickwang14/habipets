@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import CalendarModal from 'components/Calendar/CalendarModal'
 import Header from 'components/Header/Header'
 import Log from 'components/Log/Log'
+import { AppContext } from 'ContextProvider';
 import { ethers } from 'ethers';
 import { useAccount } from 'wagmi';
 import './HabitPage.css'
@@ -10,6 +11,7 @@ export default function HabitPage() {
     const [lastLog, setLastLog] = useState(' Never ')
     const [streak, setStreak] = useState(0)
     const walletAddress = useAccount().address;
+    const value = useContext(AppContext)
     const startTx  = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
@@ -151,7 +153,6 @@ export default function HabitPage() {
             return false;
         }
     }
-
     const logTx  = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
@@ -294,7 +295,6 @@ export default function HabitPage() {
         
         
     }
-
     const trackTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
@@ -430,7 +430,6 @@ export default function HabitPage() {
             return false;
         }
     }
-
     const claimTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
@@ -858,7 +857,7 @@ export default function HabitPage() {
     return (
         <div>
             <Header title={'HabiPets'} />
-            <h1>Habit</h1>
+            <h1>{value.habitType} Habit</h1>
             <CalendarModal />
             <button onClick={startTx}>Start</button>
             <button onClick={logTx}>Log</button>

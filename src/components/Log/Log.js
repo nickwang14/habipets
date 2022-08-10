@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
+import './Log.css'
 
 function Log({ streak, lastLog }) {
     return (
         <div>
-            <p> Your current streak is {streak} </p>
-            <p> You logged your last Habit on {lastLog} </p>
+            <p className="pushin-p"> <b>Your current streak is <span className="underline">{streak}</span></b></p>
+            <p className="pushin-p"> <b>You logged your last Habit on <span className="underline">{lastLog}</span></b></p>
         </div>
     )
 }

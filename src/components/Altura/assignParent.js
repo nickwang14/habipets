@@ -13,7 +13,7 @@ const BeginHabit = () => {
             } // fetching items with the specified collection address only
         )
         console.log(response)
-        return 
+        return
     }
 
     return (

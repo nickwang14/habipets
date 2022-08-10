@@ -1,9 +1,20 @@
-.modalDiv {
+.buttonDiv {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
-.buttonCalendar {
+.pushin-p {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.buttonLog {
     background-color: #bab4ca;
     border-radius: 10px;
     border: 2px solid #231942;
@@ -17,7 +28,7 @@
     font-size: 17px;
     font-weight: 400;
     line-height: 1.15385;
-    margin-bottom: 10px;
+    margin: 0;
     outline: none;
     padding: 8px 0.8em;
     position: relative;
@@ -30,13 +41,13 @@
     white-space: nowrap;
 }
 
-.buttonCalendar:hover,
-.buttonCalendar:focus {
+.buttonLog:hover,
+.buttonLog:focus {
     background-color: #8479a5;
     color: #231942;
 }
 
-.buttonCalendar:active {
+.buttonLog:active {
     background-color: #5e5183;
     box-shadow: none;
     color: #231942;
