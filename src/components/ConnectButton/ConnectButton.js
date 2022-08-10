@@ -1,10 +1,10 @@
 import './ConnectButton.css'
 
 const ConnectButton = () => (
-    <div className="ConnectButton">
+    <div className='ConnectButton'>
         <button
             onClick={() => {
-                alert('Altura Connect wallet backend');
+                alert('Altura Connect wallet backend')
             }}
         >
         Connect to play

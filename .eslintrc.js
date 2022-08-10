@@ -8,7 +8,7 @@ module.exports = {
     },
     parserOptions: {
         sourceType: 'module',
-        ecmaVersion: 8
+        ecmaVersion: 9
     },
     extends: ['eslint:recommended', 'plugin:react/recommended'],
     plugins: ['eslint-plugin-react'],

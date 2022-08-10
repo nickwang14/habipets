@@ -13,8 +13,8 @@ const BeginHabit = () => {
             } // fetching items with the specified collection address only
         )
         console.log(response)
-        return
-    };
+        return 
+    }
 
     return (
         <div style={{ display: 'flex' }}>
@@ -26,4 +26,4 @@ const BeginHabit = () => {
 }
 
 
-export default BeginHabit;
+export default BeginHabit
