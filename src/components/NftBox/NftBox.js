@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './NftBox.css';
 import  Context  from 'ContextProvider';
 import { HabitType } from 'consts';
-import GoodPet from 'assets/GoodNft.png'
-import BadPet from 'assets/BadNft.png'
+import GoodPet from 'assets/GoodNft.gif'
+import BadPet from 'assets/BadNft.gif'
 
 export default function NftBox({ type }) {
     return (
