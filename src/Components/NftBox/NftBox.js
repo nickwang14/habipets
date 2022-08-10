@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './NftBox.css';
-import { HabitContext } from '../../HabitContext';
-import { HabitType } from '../../consts';
-import GoodPet from '../../assets/GoodNft.gif'
-import BadPet from '../../assets/BadNft.gif'
+import  Context  from 'ContextProvider';
+import { HabitType } from 'consts';
+import GoodPet from 'assets/GoodNft.png'
+import BadPet from 'assets/BadNft.png'
 
 export default function NftBox({ type }) {
     return (
-        <HabitContext.Consumer>
+        <Context.Consumer>
             {({ setHabitType }) => (
-                <div>
+                <div className="NftBoxContainer">
                     <Link
                         to={'/Instructions'}
                         onClick={() => setHabitType(type)}
@@ -33,7 +33,7 @@ export default function NftBox({ type }) {
                     </Link>
                 </div>
             )}
-        </HabitContext.Consumer>
+        </Context.Consumer>
     );
 }
 

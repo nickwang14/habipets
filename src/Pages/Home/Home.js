@@ -1,6 +1,8 @@
-import { Header, NftBox, Intro } from '../../Exports';
+import Header from 'components/Header/Header'
+import NftBox from 'components/NftBox/NftBox'
+import Intro from 'components/Intro/Intro'
 import './Home.css';
-import { HabitType } from '../../consts';
+import { HabitType } from 'consts'
 
 const Home = () => {
     return (

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { Header } from '../../Exports';
-import { HabitContext } from '../../HabitContext';
+import Header from 'components/Header/Header';
+import Context from 'ContextProvider';
 import TextareaAutosize from 'react-textarea-autosize';
 import './Goal.css';
 
@@ -25,7 +25,7 @@ export default function Goal() {
     }
     const [frequency, setFrequency] = useState(1);
     return (
-        <HabitContext.Consumer>
+        <Context.Consumer>
             {({ habitType }) => (
                 <div>
                     <Header title={'HabiPets'} />
@@ -53,6 +53,6 @@ export default function Goal() {
                     </form>
                 </div>
             )}
-        </HabitContext.Consumer>
+        </Context.Consumer>
     );
 }

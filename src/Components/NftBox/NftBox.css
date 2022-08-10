@@ -35,6 +35,10 @@
     text-decoration: none;
 }
 
-.NftBoxLink:hover {
+.NftBoxContainer:hover, .NftBoxContainer:focus {
+    transition: transform 0.3s;
     cursor: pointer;
+    transform: scale(1.07);
+    border-radius: 25px;
+    transition: transform 0.35s;
 }

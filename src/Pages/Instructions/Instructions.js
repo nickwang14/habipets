@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import './Instructions.css';
-import { Header } from '../../Exports';
-import { HabitContext } from '../../HabitContext';
+import Header from 'components/Header/Header';
+import  Context  from 'ContextProvider';
 import { Link } from 'react-router-dom';
-import Authenticate from '../../Components/Altura/AuthenticationMessage';
-import BeginHabit from '../../Components/Altura/assignParent';
+import Authenticate from 'components/Altura/AuthenticationMessage';
+import BeginHabit from 'components/Altura/assignParent';
 
 export default function Instructions() {
     return (
-        <HabitContext.Consumer>
+        <Context.Consumer>
             {({ habitType }) => (
                 <div>
                     <Header title={'HabiPets'} />
@@ -21,7 +21,7 @@ export default function Instructions() {
                     </div>
                 </div>
             )}
-        </HabitContext.Consumer>
+        </Context.Consumer>
     );
 }
 

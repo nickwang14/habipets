@@ -22,5 +22,21 @@ module.exports = {
         'react': {
             'version': 'detect',
         },
+        settings: {
+            'import/resolver': {
+                alias: {
+                    map: [
+                        ['assets', './src/alias/'],
+                        ['axios', '.src/axios/'],
+                        ['components', '.src/components'],
+                        ['pages', '.src/pages/'],
+                        ['state', '.src/state/'],
+                        ['consts', '.src/'],
+                        ['ContextProvider', '.src/']
+                    ],
+                    extensions: ['.js', '.jsx', '.png']
+                }
+            }
+        }
     }
 };

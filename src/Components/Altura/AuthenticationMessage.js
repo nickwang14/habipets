@@ -1,4 +1,4 @@
-import authenticate from '../../axios/authenticate'
+import authenticate from 'axios/authenticate'
 import { bool } from 'prop-types';
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
