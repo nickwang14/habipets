@@ -7,6 +7,11 @@
 .pushin-p {
     display: flex;
     justify-content: center;
+    font-size: 1em;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 .buttonLog {

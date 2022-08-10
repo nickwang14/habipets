@@ -7,8 +7,8 @@ function Log({ streak, onClick, lastLog }) {
             <div className="buttonDiv">
                 <button className="buttonLog" onClick={onClick}> Log Your Habit </button>
             </div>
-            <p className="pushin-p"> Your current streak is {streak} </p>
-            <p className="pushin-p"> You logged your last Habit on {lastLog} </p>
+            <p className="pushin-p"> <b>Your current streak is <span className="underline">{streak}</span></b></p>
+            <p className="pushin-p"> <b>You logged your last Habit on <span className="underline">{lastLog}</span></b></p>
         </div>
     )
 }
