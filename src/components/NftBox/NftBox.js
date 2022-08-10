@@ -12,7 +12,7 @@ export default function NftBox({ type }) {
     return (
         <div className="NftBoxContainer">
             <Link
-                to={'/Instructions'}
+                to={'/Goal'}
                 onClick={() => pickHabitType(type)}
                 className="NftBoxLink"
             >

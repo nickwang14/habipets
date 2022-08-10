@@ -287,13 +287,19 @@ export default function HabitPage() {
 
 
         try {
-            const log = await gameWithSigner.log();
-            await log.wait(1);
+            const tracker = await gameContract.tracker(walletAddress);
+            if (tracker.started) {
+                const log = await gameWithSigner.log();
+                await log.wait(1);
 
-            setStreak(streak + 1);
-            setLastLog(Date());
+                setStreak(streak + 1);
+                setLastLog(Date());
 
-            alert(`You have a hot streak of ${streak}, keep up the good work!`)
+                alert(`You have a hot streak of ${streak}, keep up the good work!`)
+            } else {
+                alert('You have not started a streak yet, press start to commence your journey!');
+            }
+            
             
         } catch(err) {
             console.log(err)
@@ -438,7 +444,7 @@ export default function HabitPage() {
             }
 
         } catch(err) {
-            alert('log function could not run successfully' + err);
+            alert('track function could not run successfully' + err);
             return false;
         }
     }
@@ -862,10 +868,140 @@ export default function HabitPage() {
         mintiface.format(ethers.utils.FormatTypes.full);
         const mintContract = new ethers.Contract(mintAddress, mintiface, provider);
         const mintWithSigner = mintContract.connect(signer);
-        const mint = await mintWithSigner.claimPet();
-        console.log(mint);
-        alert('You just claimed your pet, great work!')
-    }
+        const gameAddress = '0x09A1d75c8A5F7f95D08a4653a715A1414692f2E8';
+        const gameAbi = [
+            {
+                'inputs': [],
+                'stateMutability': 'payable',
+                'type': 'constructor'
+            },
+            {
+                'stateMutability': 'payable',
+                'type': 'fallback'
+            },
+            {
+                'inputs': [],
+                'name': 'log',
+                'outputs': [],
+                'stateMutability': 'nonpayable',
+                'type': 'function',
+                'gas': 20000000
+            },
+            {
+                'inputs': [
+                    {
+                        'internalType': 'bool',
+                        'name': '_isGood',
+                        'type': 'bool'
+                    }
+                ],
+                'name': 'start',
+                'outputs': [],
+                'stateMutability': 'nonpayable',
+                'type': 'function',
+                'gas': 20000000
+            },
+            {
+                'inputs': [
+                    {
+                        'internalType': 'address',
+                        'name': '',
+                        'type': 'address'
+                    }
+                ],
+                'name': 'tracker',
+                'outputs': [
+                    {
+                        'internalType': 'bool',
+                        'name': 'started',
+                        'type': 'bool'
+                    },
+                    {
+                        'internalType': 'bool',
+                        'name': 'isGood',
+                        'type': 'bool'
+                    },
+                    {
+                        'internalType': 'uint16',
+                        'name': 'streak',
+                        'type': 'uint16'
+                    },
+                    {
+                        'internalType': 'uint16',
+                        'name': 'longestStreak',
+                        'type': 'uint16'
+                    },
+                    {
+                        'internalType': 'uint256',
+                        'name': 'lastLog',
+                        'type': 'uint256'
+                    }
+                ],
+                'stateMutability': 'view',
+                'type': 'function'
+            },
+            {
+                'inputs': [
+                    {
+                        'internalType': 'address',
+                        'name': '_user',
+                        'type': 'address'
+                    }
+                ],
+                'name': 'viewIsGood',
+                'outputs': [
+                    {
+                        'internalType': 'bool',
+                        'name': '',
+                        'type': 'bool'
+                    }
+                ],
+                'stateMutability': 'view',
+                'type': 'function'
+            },
+            {
+                'inputs': [
+                    {
+                        'internalType': 'address',
+                        'name': '_user',
+                        'type': 'address'
+                    }
+                ],
+                'name': 'viewLongestStreak',
+                'outputs': [
+                    {
+                        'internalType': 'uint16',
+                        'name': '',
+                        'type': 'uint16'
+                    }
+                ],
+                'stateMutability': 'view',
+                'type': 'function'
+            },
+            {
+                'stateMutability': 'payable',
+                'type': 'receive'
+            }
+        ]
+
+        const iface = new ethers.utils.Interface(gameAbi);
+        iface.format(ethers.utils.FormatTypes.full);
+        const gameContract = new ethers.Contract(gameAddress, iface, provider);
+
+        try {
+            const tracker = await gameContract.tracker(walletAddress);
+
+            if(tracker.started) {
+                const mint = await mintWithSigner.claimPet();
+                console.log(mint);
+                alert('You just claimed your pet, great work!')
+            } else {
+                alert("You haven't started a streak yet, press start to commence your journey!")
+            }
+        } catch(err) {
+            alert('track function could not run successfully' + err);
+            return false;
+        }}
     const balanceTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');
@@ -1284,9 +1420,140 @@ export default function HabitPage() {
         const mintiface = new ethers.utils.Interface(mintAbi);
         mintiface.format(ethers.utils.FormatTypes.full);
         const mintContract = new ethers.Contract(mintAddress, mintiface, provider);
-        const balanceOf = await mintContract.balanceOf(walletAddress);
-        setTokenId(parseInt(balanceOf, 16));
-    }
+        const gameAddress = '0x09A1d75c8A5F7f95D08a4653a715A1414692f2E8';
+        const gameAbi = [
+            {
+                'inputs': [],
+                'stateMutability': 'payable',
+                'type': 'constructor'
+            },
+            {
+                'stateMutability': 'payable',
+                'type': 'fallback'
+            },
+            {
+                'inputs': [],
+                'name': 'log',
+                'outputs': [],
+                'stateMutability': 'nonpayable',
+                'type': 'function',
+                'gas': 20000000
+            },
+            {
+                'inputs': [
+                    {
+                        'internalType': 'bool',
+                        'name': '_isGood',
+                        'type': 'bool'
+                    }
+                ],
+                'name': 'start',
+                'outputs': [],
+                'stateMutability': 'nonpayable',
+                'type': 'function',
+                'gas': 20000000
+            },
+            {
+                'inputs': [
+                    {
+                        'internalType': 'address',
+                        'name': '',
+                        'type': 'address'
+                    }
+                ],
+                'name': 'tracker',
+                'outputs': [
+                    {
+                        'internalType': 'bool',
+                        'name': 'started',
+                        'type': 'bool'
+                    },
+                    {
+                        'internalType': 'bool',
+                        'name': 'isGood',
+                        'type': 'bool'
+                    },
+                    {
+                        'internalType': 'uint16',
+                        'name': 'streak',
+                        'type': 'uint16'
+                    },
+                    {
+                        'internalType': 'uint16',
+                        'name': 'longestStreak',
+                        'type': 'uint16'
+                    },
+                    {
+                        'internalType': 'uint256',
+                        'name': 'lastLog',
+                        'type': 'uint256'
+                    }
+                ],
+                'stateMutability': 'view',
+                'type': 'function'
+            },
+            {
+                'inputs': [
+                    {
+                        'internalType': 'address',
+                        'name': '_user',
+                        'type': 'address'
+                    }
+                ],
+                'name': 'viewIsGood',
+                'outputs': [
+                    {
+                        'internalType': 'bool',
+                        'name': '',
+                        'type': 'bool'
+                    }
+                ],
+                'stateMutability': 'view',
+                'type': 'function'
+            },
+            {
+                'inputs': [
+                    {
+                        'internalType': 'address',
+                        'name': '_user',
+                        'type': 'address'
+                    }
+                ],
+                'name': 'viewLongestStreak',
+                'outputs': [
+                    {
+                        'internalType': 'uint16',
+                        'name': '',
+                        'type': 'uint16'
+                    }
+                ],
+                'stateMutability': 'view',
+                'type': 'function'
+            },
+            {
+                'stateMutability': 'payable',
+                'type': 'receive'
+            }
+        ]
+
+        const iface = new ethers.utils.Interface(gameAbi);
+        iface.format(ethers.utils.FormatTypes.full);
+        const gameContract = new ethers.Contract(gameAddress, iface, provider);
+
+        try {
+            const tracker = await gameContract.tracker(walletAddress);
+
+            if(tracker.started) {
+                const balanceOf = await mintContract.balanceOf(walletAddress);
+                setTokenId(parseInt(balanceOf, 16));
+                alert(`You have token ID #${tokenId}`)
+            } else {
+                alert("You haven't started a streak yet, press start to commence your journey!")
+            }
+        } catch(err) {
+            alert('balance function could not run successfully' + err);
+            return false;
+        }}
     const petTypeTx = async () => {
         if (!walletAddress) {
             alert('Please connect your wallet');

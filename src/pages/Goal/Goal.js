@@ -15,7 +15,7 @@ export default function Goal() {
             alert('Please enter a habit')
             return false
         }
-        alert('Submit Form Data to Altura: ' + habit + ' : ' + frequency)
+        alert('Your habit: ' + habit + ' at a frequency of ' + frequency + ' time(s) per week has been saved!')
         const success = true //success pushing to altura
         if (success) {
             navigate('/HabitPage', { replace: true })
