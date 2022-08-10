@@ -439,6 +439,8 @@ export default function HabitPage() {
 
             if (tracker.started) {
                 alert(`You have ${tracker.isGood ? 'a good' : 'an evil'} pet with a current streak of ${tracker.streak} and a longest streak of ${tracker.longestStreak}`)
+                setStreak(tracker.streak);
+
             } else {
                 alert("You haven't started a streak yet, press start to commence your journey!")
             }
@@ -2002,7 +2004,7 @@ export default function HabitPage() {
                 <button className="habitPageButton" onClick={petTypeTx}>Get Pet Type</button>
             </div>
             <Log streak={streak} lastLog={lastLog} />
-            <img src="/BadPet.gif"></img>
+            <img src="./BadPet.gif"></img>
         </div>
     )
 }
