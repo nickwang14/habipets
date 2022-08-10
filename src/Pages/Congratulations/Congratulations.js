@@ -11,7 +11,10 @@ export default function Congratulations() {
                 <img src={require('../../assets/GoodNft.png')} alt="Good Pet" className="image" />
                 <img src={require('../../assets/BadNft.png')} alt="Good Pet" className="image" />
             </div>
-            <Link class="home" to={'/'}><button className="button" role="button">Go home and start/break a new habit!</button></Link>
+            <div className="home">
+                <Link to={'/'}><button className="button" role="button">Go home and start/break a new habit!</button></Link>
+            </div>
+
         </div>
     );
 }
