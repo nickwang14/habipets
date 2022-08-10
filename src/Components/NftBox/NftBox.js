@@ -18,7 +18,7 @@ export default function NftBox({ type }) {
                     >
                         <div className={`${type}NftBox`}>
                             <img
-                                src={require(`./${type}Nft.png`)}
+                                src={type === HabitType.GOOD ? GoodPet : BadPet}
                                 alt={`${type} Pet`}
                                 className="NftImage"
                             />

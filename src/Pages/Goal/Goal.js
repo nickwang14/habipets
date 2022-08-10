@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import {useState} from 'react';
+import { useState } from 'react';
 import { Header } from '../../Exports';
 import { HabitContext } from '../../HabitContext';
 import './Goal.css';
@@ -28,7 +28,7 @@ export default function Goal() {
             {({ habitType }) => (
                 <div>
                     <Header title={'HabiPets'} />
-                    <h1 className="Title">Goal for {type} habit</h1>
+                    <h1 className="Title">Goal for {habitType} habit</h1>
                     <form onSubmit={(e) => {
                         formValidation(e);
                     }}> <div className="FormContent" >
@@ -44,7 +44,7 @@ export default function Goal() {
                                 </div>
                                 <div className='InnerBox'>
                                     <label htmlFor="frequency">Frequency (per week):</label>
-                                    <input id='frequency' type='range' min='1' max='7' onChange={(e) => {setFrequency(e.target.value)}} value={frequency}></input>
+                                    <input id='frequency' type='range' min='1' max='7' onChange={(e) => { setFrequency(e.target.value) }} value={frequency}></input>
                                     <span>{frequency}</span>
                                 </div>
                             </div>
