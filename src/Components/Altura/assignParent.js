@@ -1,5 +1,6 @@
 import { COLLECTION_ADDRESS } from '../../consts'
 import { Altura } from '@altura/altura-js'
+import './altura.css';
 
 const altura = new Altura(process.env.ALTURA_API_KEY)
 
@@ -17,7 +18,7 @@ const BeginHabit = () => {
 
     return (
         <div style={{ display: 'flex' }}>
-            <button className="button" onClick={handleBegin}>
+            <button className="alturaButton" onClick={handleBegin}>
                 Begin!
             </button>
         </div>

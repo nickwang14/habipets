@@ -1,8 +1,8 @@
-.button {
+.alturaButton {
     background-color: #bab4ca;
     border-radius: 10px;
     border: 2px solid #231942;
-    box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+    box-shadow: 0 0 0 0 inset;
     box-sizing: border-box;
     color: #231942;
     cursor: pointer;
@@ -25,13 +25,13 @@
     white-space: nowrap;
 }
 
-.button:hover,
-.button:focus {
+.alturaButton:hover,
+.alturaButton:focus {
     background-color: #8479a5;
     color: #231942;
 }
 
-.button:active {
+.alturaButton:active {
     background-color: #5e5183;
     box-shadow: none;
     color: #231942;

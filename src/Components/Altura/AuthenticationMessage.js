@@ -1,4 +1,5 @@
 import authenticate from '../../axios/authenticate'
+import './altura.css'
 import { bool } from 'prop-types';
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
@@ -16,7 +17,7 @@ AuthenticationMessage.propTypes = {
 }
 
 const Authenticate = () => {
-    const {address} = useAccount();
+    const { address } = useAccount();
     const [guard, setGuard] = useState();
     // const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -30,7 +31,7 @@ const Authenticate = () => {
                 value={guard}
             />
 
-            <button onClick={() => authenticate({address, guard})}> Authenticate </button>
+            <button className="alturaButton" onClick={() => authenticate({ address, guard })}> Authenticate </button>
 
             <p>address is: {`this is ${address}`}</p>
             <p>guard code is: {guard}</p>
